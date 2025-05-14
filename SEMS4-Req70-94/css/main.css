@@ -1,0 +1,25 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f9f9f9;
+  padding: 20px;
+}
+header {
+  background: #a00;
+  color: white;
+  padding: 10px;
+}
+nav a {
+  margin-right: 10px;
+  color: white;
+  text-decoration: none;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+th, td {
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+.status.accepted { color: green; }
+.status.pending { color: orange; }
