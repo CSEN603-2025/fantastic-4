@@ -1,0 +1,60 @@
+<!-- pages/student-applications.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Applications</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>My Applications</h1>
+        <nav>
+            <a href="student-dashboard.html">Back to Dashboard</a>
+        </nav>
+    </header>
+    <main>
+        <div class="controls">
+            <select id="filterStatus">
+                <option value="all">All Applications</option>
+                <option value="pending">Pending</option>
+                <option value="accepted">Accepted</option>
+                <option value="rejected">Rejected</option>
+            </select>
+        </div>
+
+        <table id="applicationsTable">
+            <thead>
+                <tr>
+                    <th>Internship</th>
+                    <th>Company</th>
+                    <th>Applied Date</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+
+        <!-- Application Detail Modal -->
+        <div id="applicationModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2 id="modalAppTitle"></h2>
+                <p class="company-name" id="modalAppCompany"></p>
+
+                <div class="details">
+                    <p><strong>Applied:</strong> <span id="modalAppDate"></span></p>
+                    <p><strong>Status:</strong> <span id="modalAppStatus"></span></p>
+                    <p><strong>Cover Letter:</strong></p>
+                    <div id="modalAppCoverLetter" class="content-box"></div>
+
+                    <h3>Submitted Documents</h3>
+                    <div id="modalAppDocuments" class="documents-list"></div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="../js/student-applications.js"></script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Dashboard</title>
+    <link rel="stylesheet" href="../css/styles.css" />
+</head>
+<body>
+    <header><h1>Student Dashboard</h1></header>
+    <main>
+        <h2>Welcome, <span id="studentName"></span>!</h2>
+        <div class="dashboard-cards">
+            <div class="card">
+                <h3>My Applications</h3>
+                <p id="appCount">0</p>
+                <a href="#">View Applications</a>
+            </div>
+            <div class="card">
+                <h3>Available Internships</h3>
+                <p id="internshipCount">0</p>
+                <a href="#">Browse</a>
+            </div>
+            <div class="card"><a href="#">Submit Report</a></div>
+            <div class="card"><a href="#">View Grades</a></div>
+        </div>
+        <section>
+            <h3>Notifications</h3>
+            <ul id="notificationsList"></ul>
+        </section>
+    </main>
+    <script src="../js/student-dashboard.js"></script>
+</body>
+</html>

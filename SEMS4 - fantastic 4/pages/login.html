@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link rel="stylesheet" href="../css/styles.css" />
+</head>
+<body>
+    <div class="container">
+        <h2>Login</h2>
+        <form id="loginForm">
+            <input type="email" id="email" placeholder="Email" required />
+            <input type="password" id="password" placeholder="Password" required />
+            <select id="role" required>
+                <option value="">Select Role</option>
+                <option value="student">Student</option>
+                <option value="company">Company</option>
+                <option value="coordinator">Coordinator</option>
+                <option value="evaluator">Evaluator</option>
+            </select>
+            <button type="submit">Login</button>
+        </form>
+        <p>Don’t have an account? <a href="register.html">Register</a></p>
+    </div>
+    <script src="../js/login.js"></script>
+</body>
+</html>

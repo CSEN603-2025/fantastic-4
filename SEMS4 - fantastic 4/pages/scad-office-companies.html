@@ -1,0 +1,64 @@
+<!-- pages/scad-office-companies.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SCAD Office - Company Management</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <header><h1>Company Applications</h1></header>
+    <main>
+        <div class="controls">
+            <input type="text" id="searchCompany" placeholder="Search by company name">
+            <select id="filterIndustry">
+                <option value="">All Industries</option>
+                <option value="tech">Technology</option>
+                <option value="finance">Finance</option>
+                <!-- Add more industries -->
+            </select>
+            <select id="filterStatus">
+                <option value="all">All Statuses</option>
+                <option value="pending">Pending</option>
+                <option value="approved">Approved</option>
+                <option value="rejected">Rejected</option>
+            </select>
+        </div>
+
+        <table id="companiesTable">
+            <thead>
+                <tr>
+                    <th>Company Name</th>
+                    <th>Industry</th>
+                    <th>Size</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+
+        <!-- Company Detail Modal -->
+        <div id="companyModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2 id="modalCompanyName"></h2>
+                <div class="company-details">
+                    <p><strong>Industry:</strong> <span id="modalIndustry"></span></p>
+                    <p><strong>Size:</strong> <span id="modalSize"></span></p>
+                    <p><strong>Email:</strong> <span id="modalEmail"></span></p>
+                    <div class="documents">
+                        <h3>Documents</h3>
+                        <div id="documentPreview"></div>
+                    </div>
+                    <div class="actions">
+                        <button id="approveBtn">Approve</button>
+                        <button id="rejectBtn">Reject</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="../js/scad-office-companies.js"></script>
+</body>
+</html>
