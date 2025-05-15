@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Cycle Management</title>
+    <link rel="stylesheet" href="../css/styles.css" />
+</head>
+<body>
+    <div class="sidebar">
+        <h2>SCAD Portal</h2>
+        <nav>
+            <ul>
+                <li><a href="submit-report.html">Submit Report</a></li>
+                <li><a href="view-report.html">View Report</a></li>
+                <li><a href="cycle-management.html" class="active">Cycle Management</a></li>
+                <li><a href="report-management.html">Report Management</a></li>
+                <li><a href="evaluation-report.html">Evaluation Report</a></li>
+                <li><a href="statistics.html">Statistics</a></li>
+                <li><a href="internship-info.html">Internship Info & Video</a></li>
+                <li><a href="appointment-request.html">Request Appointment</a></li>
+                <li><a href="appointment-dashboard.html">Appointments Dashboard</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="page-container">
+        <h2>Cycle Management</h2>
+
+        <label>Internship Start Date: <input type="date" /></label><br><br>
+        <label>Internship End Date: <input type="date" /></label><br><br>
+
+        <h3>Student List</h3>
+        <input type="text" placeholder="Filter students..." /><br><br>
+
+        <table>
+            <tr><th>Name</th><th>Email</th><th>Status</th></tr>
+            <tr><td>Student A</td><td>a@example.com</td><td>Active</td></tr>
+        </table>
+    </div>
+</body>
+</html>
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: #f0f4f8;
+        display: flex; /* flex container */
+        min-height: 100vh;
+    }
+
+    .sidebar {
+        width: 250px;
+        background-color: #003366;
+        color: white;
+        padding: 20px;
+        box-sizing: border-box;
+        height: 100vh;
+        flex-shrink: 0; /* prevents shrinking */
+        display: flex;
+        flex-direction: column;
+    }
+
+    .page-container {
+        background: white;
+        padding: 30px;
+        margin: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 12px rgba(0,0,0,0.1);
+        flex-grow: 1; /* takes remaining space */
+        overflow-x: auto; /* prevents horizontal overflow */
+    }
+</style>

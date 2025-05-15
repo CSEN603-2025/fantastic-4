@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Appointments Dashboard</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            height: 100vh;
+            background-color: #f4f6f9;
+        }
+
+        .sidebar {
+            width: 240px;
+            background-color: #2c3e50;
+            padding-top: 2rem;
+            color: white;
+            height: 100vh;
+            position: fixed;
+        }
+
+            .sidebar h2 {
+                text-align: center;
+                margin-bottom: 2rem;
+                font-size: 1.4rem;
+            }
+
+            .sidebar ul {
+                list-style: none;
+                padding: 0;
+            }
+
+                .sidebar ul li {
+                    margin: 1rem 0;
+                }
+
+                    .sidebar ul li a {
+                        color: white;
+                        text-decoration: none;
+                        padding: 0.75rem 1.5rem;
+                        display: block;
+                        transition: background-color 0.3s;
+                    }
+
+                        .sidebar ul li a:hover {
+                            background-color: #1abc9c;
+                        }
+
+        .main-content {
+            margin-left: 240px;
+            padding: 2rem;
+            flex: 1;
+        }
+
+        h2 {
+            margin-top: 0;
+            color: #333;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: white;
+            border-radius: 6px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        }
+
+        th, td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid #eee;
+        }
+
+        th {
+            background-color: #f9fafb;
+            font-weight: bold;
+        }
+
+        button {
+            padding: 0.4rem 0.8rem;
+            margin: 0 0.2rem;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+            button:hover {
+                opacity: 0.9;
+            }
+
+        .accept-btn {
+            background-color: #2ecc71;
+            color: white;
+        }
+
+        .reject-btn {
+            background-color: #e74c3c;
+            color: white;
+        }
+
+        .back-btn {
+            margin-top: 1rem;
+            background-color: #2980b9;
+            color: white;
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 4px;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+            .back-btn:hover {
+                background-color: #1c5980;
+            }
+    </style>
+</head>
+<body>
+
+    <div class="sidebar">
+        <h2>SCAD Portal</h2>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="submit-report.html">Submit Report</a></li>
+            <li><a href="view-report.html">View Report</a></li>
+            <li><a href="cycle-management.html">Cycle Management</a></li>
+            <li><a href="report-management.html">Report Management</a></li>
+            <li><a href="evaluation-report.html">Evaluation Report</a></li>
+            <li><a href="statistics.html">Statistics</a></li>
+            <li><a href="internship-info.html">Internship Info & Video</a></li>
+            <li><a href="appointment-request.html">Request Appointment</a></li>
+            <li><a href="appointment-dashboard.html">Appointments Dashboard</a></li>
+        </ul>
+    </div>
+
+    <div class="main-content">
+        <h2>Appointments Dashboard</h2>
+        <table>
+            <thead>
+                <tr><th>Student</th><th>Date</th><th>Status</th><th>Action</th></tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Student A</td>
+                    <td>2025-05-20</td>
+                    <td>Pending</td>
+                    <td>
+                        <button class="accept-btn">Accept</button>
+                        <button class="reject-btn">Reject</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <a href="home.html" class="back-btn">Back to Home</a>
+    </div>
+
+</body>
+</html>
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: #f0f4f8;
+        display: flex; /* flex container */
+        min-height: 100vh;
+    }
+
+    .sidebar {
+        width: 250px;
+        background-color: #003366;
+        color: white;
+        padding: 20px;
+        box-sizing: border-box;
+        height: 100vh;
+        flex-shrink: 0; /* prevents shrinking */
+        display: flex;
+        flex-direction: column;
+    }
+
+    .page-container {
+        background: white;
+        padding: 30px;
+        margin: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 12px rgba(0,0,0,0.1);
+        flex-grow: 1; /* takes remaining space */
+        overflow-x: auto; /* prevents horizontal overflow */
+    }
+</style>

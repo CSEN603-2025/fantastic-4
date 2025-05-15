@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SCAD Internship Portal</title>
+    <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+    <div class="sidebar">
+        <h2>SCAD Portal</h2>
+        <nav>
+            <ul>
+                <li><a href="submit-report.html">Submit Report</a></li>
+                <li><a href="view-report.html">View Report</a></li>
+                <li><a href="cycle-management.html">Cycle Management</a></li>
+                <li><a href="report-management.html">Report Management</a></li>
+                <li><a href="evaluation-report.html">Evaluation Report</a></li>
+                <li><a href="statistics.html">Statistics</a></li>
+                <li><a href="internship-info.html">Internship Info</a></li>
+                <li><a href="appointment-request.html">Request Appointment</a></li>
+                <li><a href="appointment-dashboard.html">Appointments Dashboard</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="main-content">
+        <h1>Welcome to SCAD Internship Portal</h1>
+        <p>Please use the menu on the left to navigate through the portal features.</p>
+    </div>
+</body>
+</html>
+
+
+<style>
+    body {
+        margin: 0;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #f4f6f9;
+        display: flex;
+        min-height: 100vh;
+    }
+
+    .sidebar {
+        width: 250px;
+        background-color: #1a1a2e;
+        color: white;
+        padding: 2rem 1rem;
+        position: fixed;
+        height: 100vh;
+    }
+
+        .sidebar h2 {
+            text-align: center;
+            margin-bottom: 2rem;
+            font-size: 1.5rem;
+            color: #e94560;
+        }
+
+        .sidebar ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+            .sidebar ul li {
+                margin-bottom: 1rem;
+            }
+
+                .sidebar ul li a {
+                    color: #fff;
+                    text-decoration: none;
+                    display: block;
+                    padding: 0.75rem 1rem;
+                    border-radius: 5px;
+                    transition: background 0.3s ease;
+                }
+
+                    .sidebar ul li a:hover {
+                        background-color: #e94560;
+                        color: #fff;
+                    }
+
+    .main-content {
+        margin-left: 250px;
+        padding: 2rem;
+        flex-grow: 1;
+    }
+
+        .main-content h1 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .main-content p {
+            font-size: 1.1rem;
+            color: #333;
+        }
+
+</style>

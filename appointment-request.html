@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Request Appointment</title>
+    <link rel="stylesheet" href="../css/styles.css" />
+</head>
+<body>
+    <div class="sidebar">
+        <h2>SCAD Portal</h2>
+        <nav>
+            <ul>
+                <li><a href="submit-report.html">Submit Report</a></li>
+                <li><a href="view-report.html">View Report</a></li>
+                <li><a href="cycle-management.html">Cycle Management</a></li>
+                <li><a href="report-management.html">Report Management</a></li>
+                <li><a href="evaluation-report.html">Evaluation Report</a></li>
+                <li><a href="statistics.html">Statistics</a></li>
+                <li><a href="internship-info.html">Internship Info & Video</a></li>
+                <li><a href="appointment-request.html" class="active">Request Appointment</a></li>
+                <li><a href="appointment-dashboard.html">Appointments Dashboard</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="page-container">
+        <h2>Request Appointment</h2>
+        <textarea placeholder="Describe your issue or question..." rows="4"></textarea><br />
+        <button>Submit Request</button>
+    </div>
+</body>
+</html>
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: #f0f4f8;
+        display: flex; /* flex container */
+        min-height: 100vh;
+    }
+
+    .sidebar {
+        width: 250px;
+        background-color: #003366;
+        color: white;
+        padding: 20px;
+        box-sizing: border-box;
+        height: 100vh;
+        flex-shrink: 0; /* prevents shrinking */
+        display: flex;
+        flex-direction: column;
+    }
+
+    .page-container {
+        background: white;
+        padding: 30px;
+        margin: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 12px rgba(0,0,0,0.1);
+        flex-grow: 1; /* takes remaining space */
+        overflow-x: auto; /* prevents horizontal overflow */
+    }
+</style>

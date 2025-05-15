@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>View Report</title>
+    <link rel="stylesheet" href="../css/styles.css" />
+</head>
+<body>
+    <div class="sidebar">
+        <h2>SCAD Internship Portal</h2>
+        <nav>
+            <ul>
+                <li><a href="submit-report.html">Submit Report</a></li>
+                <li><a href="view-report.html" class="active">View Report</a></li>
+                <li><a href="cycle-management.html">Cycle Management</a></li>
+                <li><a href="report-management.html">Report Management</a></li>
+                <li><a href="evaluation-report.html">Evaluation Report</a></li>
+                <li><a href="statistics.html">Statistics</a></li>
+                <li><a href="internship-info.html">Internship Info & Video</a></li>
+                <li><a href="appointment-request.html">Request Appointment</a></li>
+                <li><a href="appointment-dashboard.html">Appointments Dashboard</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="page-container">
+        <h2>Your Internship Report</h2>
+        <div class="report-details">
+            <p><strong>Status:</strong> <span id="reportStatus">Flagged</span></p>
+            <p><strong>Comments:</strong></p>
+            <p id="reportComments">Please provide more details about your internship tasks.</p>
+
+            <div id="appealSection">
+                <h3>Appeal</h3>
+                <textarea id="appealMessage" placeholder="Write your appeal message here..." rows="3"></textarea>
+                <button id="submitAppeal">Submit Appeal</button>
+            </div>
+        </div>
+        <p><a href="submit-report.html">Back to Submit Report</a></p>
+    </div>
+
+    <script src="../js/view-report.js"></script>
+</body>
+</html>
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: #f0f4f8;
+        display: flex; /* flex container */
+        min-height: 100vh;
+    }
+
+    .sidebar {
+        width: 250px;
+        background-color: #003366;
+        color: white;
+        padding: 20px;
+        box-sizing: border-box;
+        height: 100vh;
+        flex-shrink: 0; /* prevents shrinking */
+        display: flex;
+        flex-direction: column;
+    }
+
+    .page-container {
+        background: white;
+        padding: 30px;
+        margin: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 12px rgba(0,0,0,0.1);
+        flex-grow: 1; /* takes remaining space */
+        overflow-x: auto; /* prevents horizontal overflow */
+    }
+
+</style>
