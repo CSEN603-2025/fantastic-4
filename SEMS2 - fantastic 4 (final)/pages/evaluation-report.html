@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Evaluation Report - SCAD System</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <style>
+        /* Evaluation-specific styles */
+        .evaluation-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 2rem;
+        }
+
+        .evaluation-meta {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+        }
+
+        .evaluation-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .evaluation-section {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .rating {
+            color: #f39c12;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <!-- Reusing the coordinator dashboard header for consistency -->
+    <header>
+        <h1>SCAD Evaluation Portal</h1>
+        <nav>
+            <a href="coordinator-dashboard.html">Back to Dashboard</a>
+            <a href="login.html">Logout</a>
+        </nav>
+    </header>
+
+    <main class="coordinator-main">
+        <!-- Tab Navigation -->
+        <div class="tab-nav">
+            <a href="report-management.html">Reports</a>
+            <a href="evaluation-report.html" class="active">Evaluations</a>
+            <a href="statistics.html">Statistics</a>
+        </div>
+
+        <!-- Evaluation Report Content -->
+        <div class="evaluation-header">
+            <h2>Internship Evaluation Report</h2>
+            <button class="primary-btn" id="downloadPdf">
+                <i class="icon-download"></i> Download PDF
+            </button>
+        </div>
+
+        <!-- Metadata Section -->
+        <div class="evaluation-meta">
+            <div class="meta-grid">
+                <div>
+                    <h4>Student Information</h4>
+                    <p><strong>Name:</strong> Student A</p>
+                    <p><strong>ID:</strong> 2023001</p>
+                    <p><strong>Major:</strong> Computer Science</p>
+                </div>
+                <div>
+                    <h4>Internship Details</h4>
+                    <p><strong>Company:</strong> TechCorp Inc.</p>
+                    <p><strong>Supervisor:</strong> John Smith</p>
+                    <p><strong>Duration:</strong> Jun 1 - Aug 31, 2025</p>
+                </div>
+                <div>
+                    <h4>Evaluation Summary</h4>
+                    <p><strong>Overall Rating:</strong> <span class="rating">4.2/5</span></p>
+                    <p><strong>Completion Date:</strong> Sept 5, 2025</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Evaluation Sections -->
+        <div class="evaluation-grid">
+            <div class="evaluation-section">
+                <h3>Technical Skills</h3>
+                <p><strong>Rating:</strong> 4.5/5</p>
+                <p>Demonstrated excellent proficiency in JavaScript and React. Showed ability to quickly learn new technologies as needed.</p>
+            </div>
+
+            <div class="evaluation-section">
+                <h3>Professionalism</h3>
+                <p><strong>Rating:</strong> 4.0/5</p>
+                <p>Consistently punctual and professional in all interactions. Could improve on taking more initiative in meetings.</p>
+            </div>
+
+            <div class="evaluation-section">
+                <h3>Project Contribution</h3>
+                <p><strong>Rating:</strong> 4.3/5</p>
+                <p>Completed all assigned tasks on time. Made valuable contributions to the team project.</p>
+            </div>
+
+            <div class="evaluation-section">
+                <h3>Recommendation</h3>
+                <p><strong>Would hire:</strong> Yes</p>
+                <p><strong>For roles:</strong> Frontend Development, Junior Fullstack</p>
+                <p>Student shows great potential for growth and would be an asset to any team.</p>
+            </div>
+        </div>
+
+        <!-- Comments Section -->
+        <div class="evaluation-section" style="grid-column: 1 / -1">
+            <h3>Additional Comments</h3>
+            <textarea placeholder="Add your evaluation comments..." rows="4"></textarea>
+            <div class="form-actions">
+                <button class="primary-btn">Save Evaluation</button>
+                <button class="secondary-btn">Submit Final Version</button>
+            </div>
+        </div>
+    </main>
+
+    <script src="../js/evaluation-report.js"></script>
+</body>
+</html>

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard - SCAD System</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <header class="header" role="banner">
+        <div class="container navbar">
+            <h1><a href="student-dashboard.html" class="logo-link">SCAD Student Portal</a></h1>
+            <nav aria-label="Main navigation">
+                <ul class="nav-links">
+                    <li><span class="user-name" id="current-user">Student Name</span></li>
+                    <li>
+                        <a href="notifications.html" class="nav-icon" aria-label="Notifications">
+                            <i class="icon-bell"></i>
+                            <span class="badge">3</span>
+                        </a>
+                    </li>
+                    <li><a href="login.html" class="btn btn-outline">Logout</a></li>
+                </ul>
+            </nav>
+        </div>
+        <nav class="secondary-nav" aria-label="Secondary navigation">
+            <ul>
+                <li><a href="student-dashboard.html" class="active" aria-current="page">Dashboard</a></li>
+                <li><a href="student-applications.html">Applications</a></li>
+                <li><a href="student-view-report.html">Reports</a></li>
+                <li><a href="student-resources.html">Resources</a></li>
+               
+                <li><a href="student-profile.html">Profile</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container" id="main-content" tabindex="-1">
+        <div class="dashboard-grid">
+            <!-- Status Overview Section -->
+            <section aria-labelledby="status-heading" class="status-section">
+                <h2 id="status-heading">Internship Status Overview</h2>
+                <div class="status-cards">
+                    <div class="card status-card">
+                        <h3>Current Internship</h3>
+                        <div class="status-value approved">TechCorp Inc.</div>
+                        <div class="status-meta">Frontend Developer (2 months)</div>
+                        <a href="student-applications.html" class="btn btn-sm">View Details</a>
+                    </div>
+
+                    <div class="card status-card">
+                        <h3>Report Status</h3>
+                        <div class="status-value pending">Under Review</div>
+                        <div class="status-meta">Submitted: May 5, 2023</div>
+                        <a href="student-reports.html" class="btn btn-sm">Check Feedback</a>
+                    </div>
+
+                    <div class="card status-card">
+                        <h3>PRO Badge Progress</h3>
+                        <div class="progress-container">
+                            <div class="progress-bar" style="width: 67%;" aria-valuenow="67" aria-valuemin="0" aria-valuemax="100">
+                                <span>2/3 Months Completed</span>
+                            </div>
+                        </div>
+                        <a href="pro-badge.html" class="btn btn-sm">View Benefits</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Quick Actions Section -->
+            <section aria-labelledby="actions-heading" class="actions-section">
+                <h2 id="actions-heading">Quick Actions</h2>
+                <div class="action-grid">
+                    <a href="student-submit-report.html" class="action-card">
+                        <div class="action-icon">
+                            <i class="icon-upload"></i>
+                        </div>
+                        <h3>Submit Report</h3>
+                        <p>Upload your internship documentation</p>
+                        <span class="action-link">Go to reports →</span>
+                    </a>
+
+                    <a href="internships.html" class="action-card">
+                        <div class="action-icon">
+                            <i class="icon-briefcase"></i>
+                        </div>
+                        <h3>Find Internships</h3>
+                        <p>Browse available opportunities</p>
+                        <span class="action-link">View listings →</span>
+                    </a>
+
+                    <a href="student-resources.html" class="action-card">
+                        <div class="action-icon">
+                            <i class="icon-resources"></i>
+                        </div>
+                        <h3>Learning Resources</h3>
+                        <p>Guides and tutorials</p>
+                        <span class="action-link">Explore resources →</span>
+                    </a>
+
+                    <a href="student-appointments.html" class="action-card">
+                        <div class="action-icon">
+                            <i class="icon-calendar"></i>
+                        </div>
+                        <h3>Schedule Meeting</h3>
+                        <p>With your coordinator</p>
+                        <span class="action-link">Book appointment →</span>
+                    </a>
+                </div>
+            </section>
+
+            <!-- Upcoming Deadlines Section -->
+            <section aria-labelledby="deadlines-heading" class="deadlines-section">
+                <h2 id="deadlines-heading">Upcoming Deadlines</h2>
+                <div class="card deadlines-card">
+                    <ul class="deadlines-list">
+                        <li>
+                            <time datetime="2023-05-15">May 15</time>
+                            <span>Mid-term report submission</span>
+                            <span class="deadline-status upcoming">Upcoming</span>
+                        </li>
+                        <li>
+                            <time datetime="2023-06-01">June 1</time>
+                            <span>Final evaluation deadline</span>
+                            <span class="deadline-status warning">2 weeks left</span>
+                        </li>
+                    </ul>
+                    <a href="student-calendar.html" class="btn btn-outline btn-block">View Full Calendar</a>
+                </div>
+            </section>
+
+            <!-- Recent Activity Section -->
+            <section aria-labelledby="activity-heading" class="activity-section">
+                <h2 id="activity-heading">Recent Activity</h2>
+                <div class="card activity-card">
+                    <div class="activity-item">
+                        <div class="activity-icon">
+                            <i class="icon-notification"></i>
+                        </div>
+                        <div class="activity-content">
+                            <p><strong>New feedback</strong> on your report from TechCorp supervisor</p>
+                            <time datetime="2023-05-10T14:30">May 10, 2:30 PM</time>
+                        </div>
+                        <button class="btn btn-sm">View</button>
+                    </div>
+                    <div class="activity-item">
+                        <div class="activity-icon">
+                            <i class="icon-company"></i>
+                        </div>
+                        <div class="activity-content">
+                            <p><strong>DesignHub</strong> viewed your profile</p>
+                            <time datetime="2023-05-09T10:15">May 9, 10:15 AM</time>
+                        </div>
+                        <button class="btn btn-sm">View</button>
+                    </div>
+                    <a href="student-activity.html" class="btn btn-outline btn-block">View All Activity</a>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <p>&copy; 2023 SCAD System. All rights reserved.</p>
+            <ul class="footer-links">
+                <li><a href="accessibility.html">Accessibility</a></li>
+                <li><a href="privacy.html">Privacy Policy</a></li>
+                <li><a href="contact.html">Contact Support</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script src="../js/student-dashboard.js"></script>
+</body>
+</html>

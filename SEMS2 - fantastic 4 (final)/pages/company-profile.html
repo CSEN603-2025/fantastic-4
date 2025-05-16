@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company Profile - SCAD System</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <header class="header" role="banner">
+        <div class="container navbar">
+            <h1><a href="company-dashboard.html" class="logo-link">SCAD Company Portal</a></h1>
+            <nav aria-label="Main navigation">
+                <ul class="nav-links">
+                    <li><span class="user-name">TechCorp Inc.</span></li>
+                    <li><a href="login.html" class="btn btn-outline">Logout</a></li>
+                </ul>
+            </nav>
+        </div>
+        <nav class="secondary-nav" aria-label="Secondary navigation">
+            <ul>
+                <li><a href="company-dashboard.html">Dashboard</a></li>
+                <li><a href="company-postings.html">Internship Postings</a></li>
+                <li><a href="company-applications.html">Applications</a></li>
+                <li><a href="company-interns.html">Current Interns</a></li>
+                <li><a href="company-evaluations.html">Evaluations</a></li>
+                <li><a href="company-profile.html" class="active" aria-current="page">Profile</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container" id="main-content" tabindex="-1">
+        <div class="profile-container">
+            <div class="profile-header card">
+                <div class="profile-image">
+                    <img src="../assets/company-logo.jpg" alt="TechCorp Logo" id="companyLogo">
+                    <button class="btn btn-sm btn-outline" id="changeLogo">Change Logo</button>
+                </div>
+                <div class="profile-info">
+                    <h1>TechCorp Inc.</h1>
+                    <p class="company-industry">Technology • Large Company (500+ employees)</p>
+                    <p class="company-description">
+                        Leading technology company specializing in web and mobile applications.
+                        We provide innovative solutions for businesses worldwide.
+                    </p>
+                    <div class="profile-stats">
+                        <div class="stat-item">
+                            <span class="stat-value">15</span>
+                            <span class="stat-label">Interns this year</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-value">4.2</span>
+                            <span class="stat-label">Avg. rating</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <form class="profile-form card">
+                <h2>Company Information</h2>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="companyName" class="required">Company Name</label>
+                        <input type="text" id="companyName" class="form-control" value="TechCorp Inc." required>
+                    </div>
+                    <div class="form-group">
+                        <label for="companyIndustry" class="required">Industry</label>
+                        <select id="companyIndustry" class="form-control" required>
+                            <option value="technology" selected>Technology</option>
+                            <option value="finance">Finance</option>
+                            <option value="healthcare">Healthcare</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="companySize" class="required">Company Size</label>
+                        <select id="companySize" class="form-control" required>
+                            <option value="small">Small (1-50 employees)</option>
+                            <option value="medium">Medium (51-200 employees)</option>
+                            <option value="large" selected>Large (201-500 employees)</option>
+                            <option value="corporate">Corporate (500+ employees)</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="companyWebsite">Website</label>
+                        <input type="url" id="companyWebsite" class="form-control" value="https://techcorp.example.com">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="companyDescription">Description</label>
+                    <textarea id="companyDescription" class="form-control" rows="4">
+Leading technology company specializing in web and mobile applications. 
+We provide innovative solutions for businesses worldwide.
+                    </textarea>
+                </div>
+
+                <div class="form-group">
+                    <label>Company Documents</label>
+                    <div class="documents-list">
+                        <div class="document-item">
+                            <i class="icon-pdf"></i>
+                            <span>Tax_Document_2023.pdf</span>
+                            <button class="btn btn-sm btn-outline">Replace</button>
+                        </div>
+                        <button class="btn btn-sm" id="addDocument">+ Add Document</button>
+                    </div>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-primary">Save Changes</button>
+                    <button type="button" class="btn btn-outline">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <p>&copy; 2023 SCAD System. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../js/company-profile.js"></script>
+</body>
+</html>

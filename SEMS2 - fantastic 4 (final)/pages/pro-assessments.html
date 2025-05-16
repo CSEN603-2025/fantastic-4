@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assessments - SCAD System</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container navbar">
+            <h1>SCAD PRO Portal</h1>
+            <nav>
+                <ul class="nav-links">
+                    <li><span class="user-name">PRO Student</span></li>
+                    <li><a href="login.html" class="btn btn-outline">Logout</a></li>
+                </ul>
+            </nav>
+        </div>
+        <nav class="secondary-nav">
+            <a href="pro-student-dashboard.html">Dashboard</a>
+            <a href="pro-appointments.html">Appointments</a>
+            <a href="pro-workshops.html">Workshops</a>
+            <a href="pro-assessments.html" class="active">Assessments</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <div class="assessment-container">
+            <div class="assessment-filters">
+                <select class="form-control">
+                    <option>All Assessments</option>
+                    <option>Available</option>
+                    <option>Completed</option>
+                    <option>Certified</option>
+                </select>
+            </div>
+
+            <div class="assessment-list">
+                <div class="card assessment-card">
+                    <div class="assessment-header">
+                        <h3>Frontend Development Skills</h3>
+                        <span class="assessment-status available">Available</span>
+                    </div>
+                    <div class="assessment-body">
+                        <p>Test your knowledge of HTML, CSS, and JavaScript</p>
+                        <div class="assessment-meta">
+                            <span>30 Questions</span>
+                            <span>60 Minutes</span>
+                        </div>
+                    </div>
+                    <div class="assessment-actions">
+                        <button class="btn btn-primary">Start Assessment</button>
+                    </div>
+                </div>
+
+                <div class="card assessment-card">
+                    <div class="assessment-header">
+                        <h3>Problem Solving (Advanced)</h3>
+                        <span class="assessment-status completed">Score: 85%</span>
+                    </div>
+                    <div class="assessment-body">
+                        <p>Algorithmic thinking and problem solving</p>
+                        <div class="assessment-meta">
+                            <span>Completed: May 5, 2023</span>
+                        </div>
+                    </div>
+                    <div class="assessment-actions">
+                        <button class="btn btn-outline">View Results</button>
+                        <button class="btn btn-primary">Add to Profile</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2023 SCAD System. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../js/pro-assessments.js"></script>
+</body>
+</html>

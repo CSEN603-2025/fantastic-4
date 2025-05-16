@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Statistics - SCAD System</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>SCAD Analytics Dashboard</h1>
+        <nav>
+            <a href="coordinator-dashboard.html">Dashboard</a>
+            <a href="login.html">Logout</a>
+        </nav>
+    </header>
+
+    <main class="coordinator-main">
+        <div class="coordinator-nav">
+            <a href="coordinator-applications.html">Applications</a>
+            <a href="coordinator-cycle-management.html">Cycle Management</a>
+            <a href="coordinator-companies.html">Companies</a>
+            <a href="coordinator-reports.html">Reports</a>
+            <a href="coordinator-evaluations.html">Evaluations</a>
+            <a href="coordinator-statistics.html" class="active">Statistics</a>
+        </div>
+
+        <div class="stats-container">
+            <!-- Content from original statistics.html -->
+            <div class="time-filters">
+                <button class="time-btn active">Current Cycle</button>
+                <button class="time-btn">Last 3 Cycles</button>
+                <button class="time-btn">Year to Date</button>
+            </div>
+
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <h3>Student Participation</h3>
+                    <div class="stat-value">142 <span class="trend-up">↑12%</span></div>
+                    <div class="chart-container" id="participationChart"></div>
+                </div>
+                <!-- Additional stat cards -->
+            </div>
+        </div>
+    </main>
+    <script src="../js/coordinator-statistics.js"></script>
+</body>
+</html>

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company Dashboard - SCAD System</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <header class="header" role="banner">
+        <div class="container navbar">
+            <h1><a href="company-dashboard.html" class="logo-link">SCAD Company Portal</a></h1>
+            <nav aria-label="Main navigation">
+                <ul class="nav-links">
+                    <li><span class="user-name">TechCorp Inc.</span></li>
+                    <li>
+                        <a href="notifications.html" class="nav-icon" aria-label="Notifications">
+                            <i class="icon-bell"></i>
+                            <span class="badge">2</span>
+                        </a>
+                    </li>
+                    <li><a href="login.html" class="btn btn-outline">Logout</a></li>
+                </ul>
+            </nav>
+        </div>
+        <nav class="secondary-nav" aria-label="Secondary navigation">
+            <ul>
+                <li><a href="company-dashboard.html" class="active" aria-current="page">Dashboard</a></li>
+                <li><a href="company-postings.html">Internship Postings</a></li>
+                <li><a href="company-applications.html">Applications</a></li>
+                <li><a href="company-interns.html">Current Interns</a></li>
+                <li><a href="company-evaluations.html">Evaluations</a></li>
+                <li><a href="company-profile.html">Profile</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container" id="main-content" tabindex="-1">
+        <div class="dashboard-grid">
+            <!-- Company Overview Section -->
+            <section aria-labelledby="overview-heading" class="overview-section">
+                <h2 id="overview-heading">Company Overview</h2>
+                <div class="overview-cards">
+                    <div class="card overview-card">
+                        <h3>Active Interns</h3>
+                        <div class="overview-value">8</div>
+                        <div class="overview-meta">3 in development, 5 in design</div>
+                        <a href="company-interns.html" class="btn btn-sm">Manage Interns</a>
+                    </div>
+
+                    <div class="card overview-card">
+                        <h3>Open Positions</h3>
+                        <div class="overview-value">5</div>
+                        <div class="overview-meta">3 technical, 2 non-technical</div>
+                        <a href="company-postings.html" class="btn btn-sm">View Postings</a>
+                    </div>
+
+                    <div class="card overview-card">
+                        <h3>New Applications</h3>
+                        <div class="overview-value">12</div>
+                        <div class="overview-meta">8 pending review</div>
+                        <a href="company-applications.html" class="btn btn-sm">Review Now</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Action Required Section -->
+            <section aria-labelledby="actions-heading" class="actions-section">
+                <h2 id="actions-heading">Action Required</h2>
+                <div class="card actions-card">
+                    <div class="action-item urgent">
+                        <div class="action-icon">
+                            <i class="icon-evaluation"></i>
+                        </div>
+                        <div class="action-content">
+                            <h3>2 pending evaluations</h3>
+                            <p>For interns completing their program this week</p>
+                        </div>
+                        <button class="btn btn-sm">Complete Now</button>
+                    </div>
+
+                    <div class="action-item">
+                        <div class="action-icon">
+                            <i class="icon-application"></i>
+                        </div>
+                        <div class="action-content">
+                            <h3>5 new applications</h3>
+                            <p>For Frontend Developer position</p>
+                        </div>
+                        <button class="btn btn-sm">Review</button>
+                    </div>
+
+                    <div class="action-item">
+                        <div class="action-icon">
+                            <i class="icon-report"></i>
+                        </div>
+                        <div class="action-content">
+                            <h3>3 intern reports submitted</h3>
+                            <p>Require your review and feedback</p>
+                        </div>
+                        <button class="btn btn-sm">Review</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Recent Interns Section -->
+            <section aria-labelledby="interns-heading" class="interns-section">
+                <h2 id="interns-heading">Recent Interns</h2>
+                <div class="card interns-card">
+                    <div class="interns-list">
+                        <div class="intern-item">
+                            <div class="intern-avatar">
+                                <img src="../assets/avatar1.jpg" alt="Sarah Johnson">
+                            </div>
+                            <div class="intern-details">
+                                <h3>Sarah Johnson</h3>
+                                <p>Frontend Developer • Computer Science</p>
+                                <div class="intern-status active">Active (2 months)</div>
+                            </div>
+                            <button class="btn btn-sm btn-outline">View Profile</button>
+                        </div>
+
+                        <div class="intern-item">
+                            <div class="intern-avatar">
+                                <img src="../assets/avatar2.jpg" alt="Michael Chen">
+                            </div>
+                            <div class="intern-details">
+                                <h3>Michael Chen</h3>
+                                <p>UX Designer • Design</p>
+                                <div class="intern-status completed">Completed</div>
+                            </div>
+                            <button class="btn btn-sm btn-outline">Evaluate</button>
+                        </div>
+                    </div>
+                    <a href="company-interns.html" class="btn btn-outline btn-block">View All Interns</a>
+                </div>
+            </section>
+
+            <!-- Internship Postings Section -->
+            <section aria-labelledby="postings-heading" class="postings-section">
+                <h2 id="postings-heading">Your Internship Postings</h2>
+                <div class="card postings-card">
+                    <div class="postings-list">
+                        <div class="posting-item">
+                            <h3>Frontend Developer</h3>
+                            <div class="posting-meta">
+                                <span>Applications: 15</span>
+                                <span>Positions: 2</span>
+                                <span>Status: <span class="status-active">Active</span></span>
+                            </div>
+                            <div class="posting-actions">
+                                <button class="btn btn-sm">View Applications</button>
+                                <button class="btn btn-sm btn-outline">Edit</button>
+                            </div>
+                        </div>
+
+                        <div class="posting-item">
+                            <h3>UX Design Intern</h3>
+                            <div class="posting-meta">
+                                <span>Applications: 8</span>
+                                <span>Positions: 1</span>
+                                <span>Status: <span class="status-active">Active</span></span>
+                            </div>
+                            <div class="posting-actions">
+                                <button class="btn btn-sm">View Applications</button>
+                                <button class="btn btn-sm btn-outline">Edit</button>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="company-postings.html" class="btn btn-outline btn-block">Manage All Postings</a>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <p>&copy; 2023 SCAD System. All rights reserved.</p>
+            <ul class="footer-links">
+                <li><a href="accessibility.html">Accessibility</a></li>
+                <li><a href="privacy.html">Privacy Policy</a></li>
+                <li><a href="contact.html">Contact Support</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script src="../js/company-dashboard.js"></script>
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appointments - SCAD System</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container navbar">
+            <h1>SCAD PRO Portal</h1>
+            <nav>
+                <ul class="nav-links">
+                    <li><span class="user-name">PRO Student</span></li>
+                    <li><a href="login.html" class="btn btn-outline">Logout</a></li>
+                </ul>
+            </nav>
+        </div>
+        <nav class="secondary-nav">
+            <a href="pro-student-dashboard.html">Dashboard</a>
+            <a href="pro-appointments.html" class="active">Appointments</a>
+            <a href="pro-workshops.html">Workshops</a>
+            <a href="pro-assessments.html">Assessments</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <div class="appointment-container">
+            <div class="appointment-actions">
+                <button class="btn btn-primary" id="newAppointmentBtn">New Appointment</button>
+                <select class="form-control">
+                    <option>All Appointments</option>
+                    <option>Upcoming</option>
+                    <option>Completed</option>
+                    <option>Cancelled</option>
+                </select>
+            </div>
+
+            <div class="appointment-list">
+                <div class="card appointment-card">
+                    <div class="appointment-header">
+                        <h3>Career Guidance Session</h3>
+                        <span class="appointment-status upcoming">Upcoming</span>
+                    </div>
+                    <div class="appointment-body">
+                        <p><strong>With:</strong> SCAD Officer (John Doe)</p>
+                        <p><strong>Date:</strong> May 12, 2023 • 2:00 PM - 2:45 PM</p>
+                        <p><strong>Purpose:</strong> Internship report review</p>
+                    </div>
+                    <div class="appointment-actions">
+                        <button class="btn btn-primary">Join Call</button>
+                        <button class="btn btn-outline">Reschedule</button>
+                        <button class="btn btn-danger">Cancel</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- New Appointment Modal -->
+        <div id="appointmentModal" class="modal">
+            <div class="modal-content card">
+                <span class="close">&times;</span>
+                <h2>Schedule New Appointment</h2>
+                <form class="appointment-form">
+                    <div class="form-group">
+                        <label for="appointmentType">Appointment Type</label>
+                        <select id="appointmentType" class="form-control" required>
+                            <option value="">Select Type</option>
+                            <option value="career">Career Guidance</option>
+                            <option value="report">Report Review</option>
+                            <option value="interview">Mock Interview</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="appointmentDate">Date & Time</label>
+                        <input type="datetime-local" id="appointmentDate" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="appointmentNotes">Notes</label>
+                        <textarea id="appointmentNotes" class="form-control" rows="3"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Schedule Appointment</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2023 SCAD System. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../js/pro-appointments.js"></script>
+</body>
+</html>

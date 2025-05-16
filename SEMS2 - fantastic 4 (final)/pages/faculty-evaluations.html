@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evaluations - SCAD Faculty</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container navbar">
+            <h1>SCAD Faculty Portal</h1>
+            <nav>
+                <ul class="nav-links">
+                    <li><span class="user-name">Dr. Smith</span></li>
+                    <li><a href="login.html" class="btn btn-outline">Logout</a></li>
+                </ul>
+            </nav>
+        </div>
+        <nav class="secondary-nav">
+            <a href="faculty-dashboard.html">Dashboard</a>
+            <a href="faculty-evaluations.html" class="active">Evaluations</a>
+            <a href="faculty-reports.html">Reports</a>
+            <a href="faculty-statistics.html">Statistics</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <div class="evaluation-dashboard card">
+            <div class="evaluation-filters">
+                <select class="form-control">
+                    <option>All Evaluations</option>
+                    <option>Pending Review</option>
+                    <option>Completed</option>
+                </select>
+                <select class="form-control">
+                    <option>All Majors</option>
+                    <option>Computer Science</option>
+                    <option>Engineering</option>
+                </select>
+                <input type="text" class="form-control search" placeholder="Search students...">
+            </div>
+
+            <table class="evaluation-table">
+                <thead>
+                    <tr>
+                        <th>Student</th>
+                        <th>Major</th>
+                        <th>Company</th>
+                        <th>Evaluation Status</th>
+                        <th>Due Date</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Sarah Johnson</td>
+                        <td>Computer Science</td>
+                        <td>TechCorp Inc.</td>
+                        <td><span class="status-pending">Pending</span></td>
+                        <td>May 20, 2023</td>
+                        <td>
+                            <button class="btn btn-sm">Evaluate</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Michael Chen</td>
+                        <td>Engineering</td>
+                        <td>DesignHub</td>
+                        <td><span class="status-completed">Completed</span></td>
+                        <td>May 15, 2023</td>
+                        <td>
+                            <button class="btn btn-sm btn-outline">View</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2023 SCAD System. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../js/faculty-evaluations.js"></script>
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Profile - SCAD System</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <header class="header" role="banner">
+        <div class="container navbar">
+            <h1><a href="student-dashboard.html" class="logo-link">SCAD Student Portal</a></h1>
+            <nav aria-label="Main navigation">
+                <ul class="nav-links">
+                    <li><span class="user-name" id="current-user">Student Name</span></li>
+                    <li><a href="student-dashboard.html" class="btn btn-outline">Back to Dashboard</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container" id="main-content" tabindex="-1">
+        <div class="profile-container">
+            <h1>My Profile</h1>
+
+            <form id="profileForm" class="profile-form">
+                <fieldset>
+                    <legend>Personal Information</legend>
+                    <div class="form-group">
+                        <label for="fullName" class="required">Full Name</label>
+                        <input type="text" id="fullName" required aria-required="true" autocomplete="name">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email" class="required">Email</label>
+                        <input type="email" id="email" required aria-required="true" autocomplete="email">
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Academic Information</legend>
+                    <div class="form-group">
+                        <label for="major" class="required">Major</label>
+                        <select id="major" required aria-required="true">
+                            <option value="">Select Major</option>
+                            <option value="cs">Computer Science</option>
+                            <option value="eng">Engineering</option>
+                            <option value="bus">Business</option>
+                            <option value="des">Design</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="semester" class="required">Current Semester</label>
+                        <input type="number" id="semester" min="1" max="8" required aria-required="true">
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Professional Information</legend>
+                    <div class="form-group">
+                        <label for="interests">Job Interests</label>
+                        <input type="text" id="interests" aria-describedby="interestsHelp">
+                        <small id="interestsHelp">Separate multiple interests with commas</small>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Previous Experience</label>
+                        <div id="experienceEntries" class="dynamic-list"></div>
+                        <button type="button" id="addExperience" class="btn btn-outline btn-sm">
+                            + Add Experience
+                        </button>
+                    </div>
+
+                    <div class="form-group">
+                        <label>College Activities</label>
+                        <div id="activityEntries" class="dynamic-list"></div>
+                        <button type="button" id="addActivity" class="btn btn-outline btn-sm">
+                            + Add Activity
+                        </button>
+                    </div>
+                </fieldset>
+
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-primary">Save Profile</button>
+                    <button type="button" class="btn btn-outline">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <p>&copy; 2023 SCAD System. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../js/student-profile.js"></script>
+</body>
+</html>

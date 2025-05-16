@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRO Student Dashboard - SCAD System</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container navbar">
+            <h1>SCAD PRO Portal</h1>
+            <nav>
+                <ul class="nav-links">
+                    <li><span class="user-name">PRO Student</span></li>
+                    <li><a href="login.html" class="btn btn-outline">Logout</a></li>
+                </ul>
+            </nav>
+        </div>
+        <nav class="secondary-nav">
+            <a href="pro-student-dashboard.html" class="active">Dashboard</a>
+            <a href="pro-appointments.html">Appointments</a>
+            <a href="pro-workshops.html">Workshops</a>
+            <a href="pro-assessments.html">Assessments</a>
+            <a href="student-applications.html">Internships</a>
+            <a href="student-reports.html">Reports</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <div class="dashboard-grid">
+            <div class="status-cards">
+                <div class="card status-card pro-badge">
+                    <h3>PRO Badge Status</h3>
+                    <div class="badge-progress">
+                        <div class="progress-bar" style="width: 67%;">
+                            <span>2/3 Months Completed</span>
+                        </div>
+                    </div>
+                    <div class="badge-info">
+                        <p>Complete 3 months of internship to unlock PRO benefits</p>
+                    </div>
+                </div>
+                
+                <div class="card status-card">
+                    <h3>Upcoming Appointments</h3>
+                    <div class="appointment-list">
+                        <div class="appointment-item">
+                            <p><strong>Career Guidance</strong> with SCAD Officer</p>
+                            <p>Tomorrow, 2:00 PM</p>
+                            <button class="btn btn-sm">Join Call</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <section class="quick-actions">
+                <h2>PRO Features</h2>
+                <div class="action-grid">
+                    <a href="pro-appointments.html" class="action-card">
+                        <h3>Schedule Appointment</h3>
+                        <p>Book career guidance session</p>
+                    </a>
+                    <a href="pro-workshops.html" class="action-card">
+                        <h3>View Workshops</h3>
+                        <p>Enhance your skills</p>
+                    </a>
+                    <a href="pro-assessments.html" class="action-card">
+                        <h3>Take Assessment</h3>
+                        <p>Test your knowledge</p>
+                    </a>
+                    <a href="pro-companies-viewed.html" class="action-card">
+                        <h3>Profile Views</h3>
+                        <p>See who viewed you</p>
+                    </a>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2023 SCAD System. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../js/pro-dashboard.js"></script>
+</body>
+</html>

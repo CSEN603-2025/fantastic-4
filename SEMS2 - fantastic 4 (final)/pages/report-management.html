@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report Management - SCAD System</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <header class="header" role="banner">
+        <div class="container navbar">
+            <h1><a href="coordinator-dashboard.html" class="logo-link">SCAD Coordinator Portal</a></h1>
+            <nav aria-label="Main navigation">
+                <ul class="nav-links">
+                    <li><span class="user-name">Coordinator Name</span></li>
+                    <li><a href="login.html" class="btn btn-outline">Logout</a></li>
+                </ul>
+            </nav>
+        </div>
+        <nav class="secondary-nav" aria-label="Secondary navigation">
+            <ul>
+                <li><a href="coordinator-dashboard.html">Dashboard</a></li>
+                <li><a href="coordinator-applications.html">Applications</a></li>
+                <li><a href="coordinator-cycle-management.html">Cycle Management</a></li>
+                <li><a href="scad-office-companies.html">Companies</a></li>
+                <li><a href="report-management.html" class="active" aria-current="page">Reports</a></li>
+                <li><a href="evaluation-report.html">Evaluations</a></li>
+                <li><a href="coordinator-statistics.html">Statistics</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container" id="main-content" tabindex="-1">
+        <div class="report-management card">
+            <div class="page-header">
+                <h1>Report Management</h1>
+                <div class="page-actions">
+                    <button class="btn btn-outline" id="exportReports">Export Data</button>
+                </div>
+            </div>
+
+            <div class="report-filters">
+                <div class="filter-group">
+                    <label for="reportStatusFilter" class="sr-only">Filter by status</label>
+                    <select id="reportStatusFilter" class="form-control">
+                        <option value="">All Statuses</option>
+                        <option value="pending">Pending</option>
+                        <option value="flagged">Flagged</option>
+                        <option value="approved">Approved</option>
+                        <option value="rejected">Rejected</option>
+                    </select>
+
+                    <label for="reportMajorFilter" class="sr-only">Filter by major</label>
+                    <select id="reportMajorFilter" class="form-control">
+                        <option value="">All Majors</option>
+                        <option value="cs">Computer Science</option>
+                        <option value="eng">Engineering</option>
+                    </select>
+                </div>
+
+                <div class="search-group">
+                    <label for="reportSearch" class="sr-only">Search reports</label>
+                    <input type="text" id="reportSearch" class="form-control" placeholder="Search reports...">
+                    <button class="search-btn" aria-label="Search">
+                        <i class="icon-search"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="table-responsive">
+                <table class="data-table" aria-describedby="reportsTableDesc">
+                    <caption id="reportsTableDesc" class="sr-only">List of student internship reports with status and actions</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">Student</th>
+                            <th scope="col">Major</th>
+                            <th scope="col">Company</th>
+                            <th scope="col">Submission Date</th>
+                            <th scope="col">Status</th>
+                            <th scope="col">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Sarah Johnson</td>
+                            <td>Computer Science</td>
+                            <td>TechCorp Inc.</td>
+                            <td>May 10, 2023</td>
+                            <td><span class="status-badge pending">Pending</span></td>
+                            <td>
+                                <button class="btn btn-sm">Review</button>
+                                <button class="btn btn-sm btn-outline">Download</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Michael Chen</td>
+                            <td>Engineering</td>
+                            <td>DesignHub</td>
+                            <td>May 8, 2023</td>
+                            <td><span class="status-badge flagged">Flagged</span></td>
+                            <td>
+                                <button class="btn btn-sm">Review</button>
+                                <button class="btn btn-sm btn-outline">Download</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <nav class="pagination" aria-label="Report pagination">
+                <button class="btn btn-outline" disabled>Previous</button>
+                <span class="page-info">Page 1 of 5</span>
+                <button class="btn btn-outline">Next</button>
+            </nav>
+        </div>
+    </main>
+
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <p>&copy; 2023 SCAD System. All rights reserved.</p>
+            <ul class="footer-links">
+                <li><a href="accessibility.html">Accessibility</a></li>
+                <li><a href="privacy.html">Privacy Policy</a></li>
+                <li><a href="contact.html">Contact Support</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script src="../js/report-management.js"></script>
+</body>
+</html>

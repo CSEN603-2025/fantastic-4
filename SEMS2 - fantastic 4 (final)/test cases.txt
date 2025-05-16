@@ -1,0 +1,47 @@
+Valid Student Login
+
+    Email: student@test.com
+
+    Password: student123
+
+    Role: Student
+
+    Expected: Redirect to student-dashboard.html
+
+    Storage: Saves student data in localStorage
+
+Valid PRO Student Login
+
+    Email: prostudent@test.com
+
+    Password: pro123
+
+    Role: PRO Student
+
+    Expected: Redirect to pro-student-dashboard.html
+
+    Storage: Saves PRO student data
+
+Valid Company Login
+
+    Email: company@test.com
+
+    Password: company123
+
+    Role: Company
+
+    Expected: Redirect to company-dashboard.html
+
+    Storage: Saves company data
+
+Valid Coordinator Login
+
+    Email: coordinator@test.com
+
+    Password: coord123
+
+    Role: Coordinator
+
+    Expected: Redirect to coordinator-dashboard.html
+
+    Storage: Saves coordinator data

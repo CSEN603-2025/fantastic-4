@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Report - SCAD System</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>My Internship Report</h1>
+        <nav>
+            <a href="student-dashboard.html">Dashboard</a>
+            <a href="login.html">Logout</a>
+        </nav>
+    </header>
+
+    <main class="student-main">
+        <div class="student-nav">
+            <a href="student-applications.html">Applications</a>
+            <a href="student-reports.html">Reports</a>
+            <a href="student-resources.html">Resources</a>
+        </div>
+
+        <div class="report-status-container">
+            <div class="status-card ${status}">
+                <h3>Report Status</h3>
+                <div class="status-indicator">Flagged</div>
+                <div class="feedback">
+                    <p>Please provide more details about your internship tasks.</p>
+                </div>
+                <div class="appeal-section">
+                    <textarea placeholder="Enter your appeal..."></textarea>
+                    <button class="secondary-btn">Submit Appeal</button>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Register</title>
+    <link rel="stylesheet" href="../css/styles.css" />
+</head>
+<body class="center-screen">
+    <div class="login-container">
+        <h2>Register</h2>
+        <form id="registerForm">
+            <select id="role" required>
+                <option value="">Select Role</option>
+                <option value="student">Student</option>
+                <option value="company">Company</option>
+            </select>
+
+            <!-- Shared fields -->
+            <input type="email" id="email" placeholder="Email" required />
+            <input type="password" id="password" placeholder="Password" required />
+
+            <!-- Student-only field -->
+            <input type="text" id="studentName" placeholder="Full Name" />
+
+            <!-- Company-only fields -->
+            <div id="companyFields" style="display: none;">
+                <input type="text" id="companyName" placeholder="Company Name" />
+                <input type="text" id="industry" placeholder="Industry" />
+                <input type="text" id="companySize" placeholder="Company Size" />
+                <label>Upload logo</label>
+                <input type="file" id="companyLogo" accept="image/*" />
+                <label for="companyProof">Upload Proof of Legitimacy (e.g. Tax Docs)</label>
+                <input type="file" id="companyProof" accept=".pdf,.doc,.docx,.jpg,.png" />
+
+            </div>
+            
+            <button type="submit">Register</button>
+        </form>
+        <p>Already have an account? <a href="login.html">Login</a></p>
+    </div>
+    <script src="../js/register.js"></script>
+</body>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Current Interns - SCAD System</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <header class="header" role="banner">
+        <div class="container navbar">
+            <h1><a href="company-dashboard.html" class="logo-link">SCAD Company Portal</a></h1>
+            <nav aria-label="Main navigation">
+                <ul class="nav-links">
+                    <li><span class="user-name">TechCorp Inc.</span></li>
+                    <li>
+                        <a href="notifications.html" class="nav-icon" aria-label="Notifications">
+                            <i class="icon-bell"></i>
+                            <span class="badge">1</span>
+                        </a>
+                    </li>
+                    <li><a href="login.html" class="btn btn-outline">Logout</a></li>
+                </ul>
+            </nav>
+        </div>
+        <nav class="secondary-nav" aria-label="Secondary navigation">
+            <ul>
+                <li><a href="company-dashboard.html">Dashboard</a></li>
+                <li><a href="company-postings.html">Internship Postings</a></li>
+                <li><a href="company-applications.html">Applications</a></li>
+                <li><a href="company-interns.html" class="active" aria-current="page">Current Interns</a></li>
+                <li><a href="company-evaluations.html">Evaluations</a></li>
+                <li><a href="company-profile.html">Profile</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container" id="main-content" tabindex="-1">
+        <div class="page-header">
+            <h1>Current Interns</h1>
+            <div class="header-actions">
+                <button class="btn btn-outline" id="exportInterns">Export</button>
+            </div>
+        </div>
+
+        <div class="interns-filters card">
+            <div class="filter-group">
+                <label for="internStatus" class="sr-only">Filter by status</label>
+                <select id="internStatus" class="form-control">
+                    <option value="">All Statuses</option>
+                    <option value="active">Active</option>
+                    <option value="completed">Completed</option>
+                </select>
+
+                <label for="internDepartment" class="sr-only">Filter by department</label>
+                <select id="internDepartment" class="form-control">
+                    <option value="">All Departments</option>
+                    <option value="development">Development</option>
+                    <option value="design">Design</option>
+                    <option value="marketing">Marketing</option>
+                </select>
+            </div>
+
+            <div class="search-group">
+                <label for="internSearch" class="sr-only">Search interns</label>
+                <input type="text" id="internSearch" class="form-control" placeholder="Search interns...">
+                <button class="search-btn" aria-label="Search">
+                    <i class="icon-search"></i>
+                </button>
+            </div>
+        </div>
+
+        <div class="interns-grid">
+            <div class="card intern-card">
+                <div class="intern-header">
+                    <img src="../assets/avatar1.jpg" alt="Sarah Johnson" class="intern-avatar">
+                    <h2>Sarah Johnson</h2>
+                    <span class="intern-status active">Active</span>
+                </div>
+                <div class="intern-details">
+                    <p><i class="icon-briefcase"></i> Frontend Developer</p>
+                    <p><i class="icon-department"></i> Development</p>
+                    <p><i class="icon-calendar"></i> Mar 1 - Jun 1, 2023</p>
+                    <p><i class="icon-progress"></i> 2/3 months completed</p>
+                </div>
+                <div class="intern-actions">
+                    <button class="btn btn-sm">View Profile</button>
+                    <button class="btn btn-sm btn-outline">Message</button>
+                </div>
+            </div>
+
+            <div class="card intern-card">
+                <div class="intern-header">
+                    <img src="../assets/avatar2.jpg" alt="Michael Chen" class="intern-avatar">
+                    <h2>Michael Chen</h2>
+                    <span class="intern-status completed">Completed</span>
+                </div>
+                <div class="intern-details">
+                    <p><i class="icon-briefcase"></i> UX Design Intern</p>
+                    <p><i class="icon-department"></i> Design</p>
+                    <p><i class="icon-calendar"></i> Jan 15 - Apr 15, 2023</p>
+                    <p><i class="icon-evaluation"></i> Evaluation pending</p>
+                </div>
+                <div class="intern-actions">
+                    <button class="btn btn-sm">View Profile</button>
+                    <button class="btn btn-sm btn-primary">Evaluate</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <p>&copy; 2023 SCAD System. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../js/company-interns.js"></script>
+</body>
+</html>

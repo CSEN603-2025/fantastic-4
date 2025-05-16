@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evaluations - SCAD System</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <header class="header" role="banner">
+        <div class="container navbar">
+            <h1><a href="company-dashboard.html" class="logo-link">SCAD Company Portal</a></h1>
+            <nav aria-label="Main navigation">
+                <ul class="nav-links">
+                    <li><span class="user-name">TechCorp Inc.</span></li>
+                    <li>
+                        <a href="notifications.html" class="nav-icon" aria-label="Notifications">
+                            <i class="icon-bell"></i>
+                            <span class="badge">2</span>
+                        </a>
+                    </li>
+                    <li><a href="login.html" class="btn btn-outline">Logout</a></li>
+                </ul>
+            </nav>
+        </div>
+        <nav class="secondary-nav" aria-label="Secondary navigation">
+            <ul>
+                <li><a href="company-dashboard.html">Dashboard</a></li>
+                <li><a href="company-postings.html">Internship Postings</a></li>
+                <li><a href="company-applications.html">Applications</a></li>
+                <li><a href="company-interns.html">Current Interns</a></li>
+                <li><a href="company-evaluations.html" class="active" aria-current="page">Evaluations</a></li>
+                <li><a href="company-profile.html">Profile</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container" id="main-content" tabindex="-1">
+        <div class="page-header">
+            <h1>Intern Evaluations</h1>
+            <div class="header-actions">
+                <button class="btn btn-outline" id="exportEvaluations">Export</button>
+            </div>
+        </div>
+
+        <div class="evaluations-filters card">
+            <div class="filter-group">
+                <label for="evaluationStatus" class="sr-only">Filter by status</label>
+                <select id="evaluationStatus" class="form-control">
+                    <option value="">All Statuses</option>
+                    <option value="pending">Pending</option>
+                    <option value="completed">Completed</option>
+                </select>
+
+                <label for="evaluationDepartment" class="sr-only">Filter by department</label>
+                <select id="evaluationDepartment" class="form-control">
+                    <option value="">All Departments</option>
+                    <option value="development">Development</option>
+                    <option value="design">Design</option>
+                </select>
+            </div>
+
+            <div class="search-group">
+                <label for="evaluationSearch" class="sr-only">Search evaluations</label>
+                <input type="text" id="evaluationSearch" class="form-control" placeholder="Search evaluations...">
+                <button class="search-btn" aria-label="Search">
+                    <i class="icon-search"></i>
+                </button>
+            </div>
+        </div>
+
+        <div class="evaluations-list">
+            <div class="card evaluation-card">
+                <div class="evaluation-header">
+                    <div class="intern-info">
+                        <img src="../assets/avatar2.jpg" alt="Michael Chen" class="intern-avatar">
+                        <div>
+                            <h2>Michael Chen</h2>
+                            <p>UX Design Intern • Jan 15 - Apr 15, 2023</p>
+                        </div>
+                    </div>
+                    <span class="evaluation-status pending">Pending</span>
+                </div>
+                <div class="evaluation-due">
+                    <i class="icon-deadline"></i>
+                    <span>Due: May 1, 2023</span>
+                </div>
+                <div class="evaluation-actions">
+                    <button class="btn btn-primary">Complete Evaluation</button>
+                    <button class="btn btn-outline">View Details</button>
+                </div>
+            </div>
+
+            <div class="card evaluation-card">
+                <div class="evaluation-header">
+                    <div class="intern-info">
+                        <img src="../assets/avatar3.jpg" alt="Emily Rodriguez" class="intern-avatar">
+                        <div>
+                            <h2>Emily Rodriguez</h2>
+                            <p>Marketing Intern • Feb 1 - May 1, 2023</p>
+                        </div>
+                    </div>
+                    <span class="evaluation-status completed">Completed</span>
+                </div>
+                <div class="evaluation-rating">
+                    <div class="rating-stars">
+                        <i class="icon-star filled"></i>
+                        <i class="icon-star filled"></i>
+                        <i class="icon-star filled"></i>
+                        <i class="icon-star filled"></i>
+                        <i class="icon-star"></i>
+                    </div>
+                    <span>Overall: 4/5</span>
+                </div>
+                <div class="evaluation-actions">
+                    <button class="btn btn-outline">View Evaluation</button>
+                    <button class="btn btn-outline">Download PDF</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <p>&copy; 2023 SCAD System. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../js/company-evaluations.js"></script>
+</body>
+</html>

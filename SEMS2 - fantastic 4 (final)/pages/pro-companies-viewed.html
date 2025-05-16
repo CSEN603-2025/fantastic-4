@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Views - SCAD System</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container navbar">
+            <h1>SCAD PRO Portal</h1>
+            <nav>
+                <ul class="nav-links">
+                    <li><span class="user-name">PRO Student</span></li>
+                    <li><a href="login.html" class="btn btn-outline">Logout</a></li>
+                </ul>
+            </nav>
+        </div>
+        <nav class="secondary-nav">
+            <a href="pro-student-dashboard.html">Dashboard</a>
+            <a href="pro-badge.html">PRO Badge</a>
+            <a href="pro-companies-viewed.html" class="active">Profile Views</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <div class="views-container card">
+            <h2>Companies That Viewed Your Profile</h2>
+
+            <div class="views-filters">
+                <select class="form-control">
+                    <option>Last 30 Days</option>
+                    <option>Last 3 Months</option>
+                    <option>All Time</option>
+                </select>
+                <input type="text" class="form-control search" placeholder="Search companies...">
+            </div>
+
+            <div class="views-list">
+                <div class="view-item">
+                    <div class="company-info">
+                        <div class="company-logo">
+                            <img src="../assets/techcorp-logo.png" alt="TechCorp Logo">
+                        </div>
+                        <div class="company-details">
+                            <h3>TechCorp Inc.</h3>
+                            <p>Technology • Large Company</p>
+                            <span class="view-date">Viewed: May 10, 2023</span>
+                        </div>
+                    </div>
+                    <div class="view-actions">
+                        <button class="btn btn-outline">View Profile</button>
+                    </div>
+                </div>
+
+                <div class="view-item">
+                    <div class="company-info">
+                        <div class="company-logo">
+                            <img src="../assets/designhub-logo.png" alt="DesignHub Logo">
+                        </div>
+                        <div class="company-details">
+                            <h3>DesignHub</h3>
+                            <p>Design • Medium Company</p>
+                            <span class="view-date">Viewed: May 5, 2023</span>
+                        </div>
+                    </div>
+                    <div class="view-actions">
+                        <button class="btn btn-outline">View Profile</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2023 SCAD System. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../js/pro-views.js"></script>
+</body>
+</html>

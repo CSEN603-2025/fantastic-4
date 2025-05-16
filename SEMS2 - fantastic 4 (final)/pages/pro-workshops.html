@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workshops - SCAD System</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container navbar">
+            <h1>SCAD PRO Portal</h1>
+            <nav>
+                <ul class="nav-links">
+                    <li><span class="user-name">PRO Student</span></li>
+                    <li><a href="login.html" class="btn btn-outline">Logout</a></li>
+                </ul>
+            </nav>
+        </div>
+        <nav class="secondary-nav">
+            <a href="pro-student-dashboard.html">Dashboard</a>
+            <a href="pro-appointments.html">Appointments</a>
+            <a href="pro-workshops.html" class="active">Workshops</a>
+            <a href="pro-assessments.html">Assessments</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <div class="workshop-container">
+            <div class="workshop-filters">
+                <select class="form-control">
+                    <option>All Workshops</option>
+                    <option>Upcoming</option>
+                    <option>Past</option>
+                    <option>Registered</option>
+                </select>
+                <input type="text" class="form-control search" placeholder="Search workshops...">
+            </div>
+
+            <div class="workshop-list">
+                <div class="card workshop-card">
+                    <div class="workshop-header">
+                        <h3>Frontend Development Masterclass</h3>
+                        <span class="workshop-date">May 15, 2023 • 10:00 AM</span>
+                    </div>
+                    <div class="workshop-body">
+                        <p>Learn advanced React techniques from industry experts</p>
+                        <div class="workshop-meta">
+                            <span class="workshop-duration">2 hours</span>
+                            <span class="workshop-type">Live Session</span>
+                        </div>
+                    </div>
+                    <div class="workshop-actions">
+                        <button class="btn btn-primary">Register</button>
+                        <button class="btn btn-outline">View Details</button>
+                    </div>
+                </div>
+
+                <div class="card workshop-card">
+                    <div class="workshop-header">
+                        <h3>Career Networking Strategies</h3>
+                        <span class="workshop-date">May 20, 2023 • 3:00 PM</span>
+                    </div>
+                    <div class="workshop-body">
+                        <p>Learn how to build professional connections in your industry</p>
+                        <div class="workshop-meta">
+                            <span class="workshop-duration">1.5 hours</span>
+                            <span class="workshop-type">Interactive Webinar</span>
+                        </div>
+                    </div>
+                    <div class="workshop-actions">
+                        <button class="btn btn-primary">Register</button>
+                        <button class="btn btn-outline">View Details</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2023 SCAD System. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../js/pro-workshops.js"></script>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Call - SCAD System</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/video-call.css">
+</head>
+<body>
+    <div class="video-call-container">
+        <div class="call-header">
+            <h2>Career Guidance Session</h2>
+            <div class="call-timer">00:12:45</div>
+        </div>
+
+        <div class="video-grid">
+            <div class="participant-video">
+                <video id="remoteVideo" autoplay></video>
+                <div class="participant-info">
+                    <span>SCAD Officer (John Doe)</span>
+                    <span class="connection-status">Connected</span>
+                </div>
+            </div>
+
+            <div class="self-video">
+                <video id="localVideo" autoplay muted></video>
+            </div>
+        </div>
+
+        <div class="call-controls">
+            <button class="control-btn mic-btn active" title="Mute">
+                <i class="icon-mic"></i>
+            </button>
+            <button class="control-btn video-btn active" title="Stop Video">
+                <i class="icon-video"></i>
+            </button>
+            <button class="control-btn screen-btn" title="Share Screen">
+                <i class="icon-screen"></i>
+            </button>
+            <button class="control-btn chat-btn" title="Open Chat">
+                <i class="icon-chat"></i>
+            </button>
+            <button class="control-btn end-call-btn" title="End Call">
+                <i class="icon-call-end"></i>
+            </button>
+        </div>
+
+        <div class="call-chat hidden">
+            <div class="chat-header">
+                <h3>Meeting Chat</h3>
+                <button class="close-chat">&times;</button>
+            </div>
+            <div class="chat-messages">
+                <div class="message">
+                    <span class="sender">John Doe:</span>
+                    <span class="text">Let's review your internship report</span>
+                </div>
+            </div>
+            <div class="chat-input">
+                <input type="text" placeholder="Type your message...">
+                <button class="btn btn-sm">Send</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/video-call.js"></script>
+</body>
+</html>

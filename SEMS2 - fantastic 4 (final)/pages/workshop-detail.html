@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workshop Details - SCAD System</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container navbar">
+            <h1>SCAD PRO Portal</h1>
+            <nav>
+                <ul class="nav-links">
+                    <li><span class="user-name">PRO Student</span></li>
+                    <li><a href="login.html" class="btn btn-outline">Logout</a></li>
+                </ul>
+            </nav>
+        </div>
+        <nav class="secondary-nav">
+            <a href="pro-student-dashboard.html">Dashboard</a>
+            <a href="pro-workshops.html">Workshops</a>
+            <a href="workshop-detail.html" class="active">Workshop Details</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <div class="workshop-detail card">
+            <div class="workshop-hero">
+                <div class="workshop-image">
+                    <img src="../assets/frontend-workshop.jpg" alt="Frontend Workshop">
+                </div>
+                <div class="workshop-meta">
+                    <h2>Frontend Development Masterclass</h2>
+                    <div class="meta-item">
+                        <i class="icon-calendar"></i>
+                        <span>May 15, 2023 • 10:00 AM - 12:00 PM</span>
+                    </div>
+                    <div class="meta-item">
+                        <i class="icon-presenter"></i>
+                        <span>Presented by: Jane Smith (Senior Developer at TechCorp)</span>
+                    </div>
+                    <div class="meta-item">
+                        <i class="icon-type"></i>
+                        <span>Type: Live Interactive Session</span>
+                    </div>
+                    <button class="btn btn-primary register-btn">Register Now</button>
+                </div>
+            </div>
+
+            <div class="workshop-content">
+                <div class="workshop-description">
+                    <h3>Workshop Description</h3>
+                    <p>This intensive workshop will cover advanced React techniques including state management with Redux, performance optimization, and modern hooks patterns. You'll learn directly from industry experts and have the opportunity to work on real-world scenarios.</p>
+                </div>
+
+                <div class="workshop-agenda">
+                    <h3>Agenda</h3>
+                    <ul class="agenda-list">
+                        <li>10:00 - 10:30: React Fundamentals Review</li>
+                        <li>10:30 - 11:15: State Management Deep Dive</li>
+                        <li>11:15 - 12:00: Performance Optimization Techniques</li>
+                    </ul>
+                </div>
+
+                <div class="workshop-materials">
+                    <h3>Preparation Materials</h3>
+                    <div class="materials-list">
+                        <a href="#" class="material-item">
+                            <i class="icon-pdf"></i>
+                            <span>Pre-workshop Reading (PDF)</span>
+                        </a>
+                        <a href="#" class="material-item">
+                            <i class="icon-link"></i>
+                            <span>Code Repository</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2023 SCAD System. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../js/workshop-detail.js"></script>
+</body>
+</html>

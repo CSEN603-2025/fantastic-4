@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - SCAD System</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body class="auth-page">
+    <main class="auth-container">
+        <div class="auth-card">
+            <div class="auth-header">
+                <h1>Welcome to SCAD</h1>
+                <p>Sign in to your account</p>
+            </div>
+
+            <form id="loginForm" class="auth-form">
+                <div class="form-group">
+                    <label for="loginEmail" class="required">Email Address</label>
+                    <input type="email" id="loginEmail" required aria-required="true" autocomplete="username">
+                </div>
+
+                <div class="form-group">
+                    <label for="loginPassword" class="required">Password</label>
+                    <input type="password" id="loginPassword" required aria-required="true" autocomplete="current-password">
+                    <a href="forgot-password.html" class="forgot-password">Forgot password?</a>
+                </div>
+
+                <div class="form-group">
+                    <label for="loginRole" class="required">Role</label>
+                    <select id="loginRole" required aria-required="true">
+                        <option value="">Select your role</option>
+                        <option value="student">Student</option>
+                        <option value="pro-student">PRO Student</option>
+                        <option value="company">Company</option>
+                        <option value="coordinator">Coordinator</option>
+                        <option value="faculty">Faculty</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-block">Login</button>
+
+                <div class="auth-footer">
+                    <p>Don't have an account? <a href="register.html" aria-label="Register a new account">Register</a></p>
+                </div>
+            </form>
+        </div>
+
+        <div class="auth-aside">
+            <div class="aside-content">
+                <h2>SCAD Internship System</h2>
+                <p>Connecting students with industry opportunities</p>
+                <div class="keyboard-hint" aria-hidden="true">
+                    <span>↑↓</span> to navigate • <span>↵</span> to select
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="../js/login.js"></script>
+</body>
+</html>

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Internship Postings - SCAD System</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <header class="header" role="banner">
+        <div class="container navbar">
+            <h1><a href="company-dashboard.html" class="logo-link">SCAD Company Portal</a></h1>
+            <nav aria-label="Main navigation">
+                <ul class="nav-links">
+                    <li><span class="user-name">TechCorp Inc.</span></li>
+                    <li>
+                        <a href="notifications.html" class="nav-icon" aria-label="Notifications">
+                            <i class="icon-bell"></i>
+                            <span class="badge">2</span>
+                        </a>
+                    </li>
+                    <li><a href="login.html" class="btn btn-outline">Logout</a></li>
+                </ul>
+            </nav>
+        </div>
+        <nav class="secondary-nav" aria-label="Secondary navigation">
+            <ul>
+                <li><a href="company-dashboard.html">Dashboard</a></li>
+                <li><a href="company-postings.html" class="active" aria-current="page">Internship Postings</a></li>
+                <li><a href="company-applications.html">Applications</a></li>
+                <li><a href="company-interns.html">Current Interns</a></li>
+                <li><a href="company-evaluations.html">Evaluations</a></li>
+                <li><a href="company-profile.html">Profile</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container" id="main-content" tabindex="-1">
+        <div class="page-header">
+            <h1>Internship Postings</h1>
+            <button class="btn btn-primary" id="newPostingBtn">+ New Posting</button>
+        </div>
+
+        <div class="postings-filters card">
+            <div class="filter-group">
+                <label for="postingStatus" class="sr-only">Filter by status</label>
+                <select id="postingStatus" class="form-control">
+                    <option value="">All Statuses</option>
+                    <option value="active">Active</option>
+                    <option value="draft">Draft</option>
+                    <option value="closed">Closed</option>
+                </select>
+
+                <label for="postingDepartment" class="sr-only">Filter by department</label>
+                <select id="postingDepartment" class="form-control">
+                    <option value="">All Departments</option>
+                    <option value="development">Development</option>
+                    <option value="design">Design</option>
+                    <option value="marketing">Marketing</option>
+                </select>
+            </div>
+
+            <div class="search-group">
+                <label for="postingSearch" class="sr-only">Search postings</label>
+                <input type="text" id="postingSearch" class="form-control" placeholder="Search postings...">
+                <button class="search-btn" aria-label="Search">
+                    <i class="icon-search"></i>
+                </button>
+            </div>
+        </div>
+
+        <div class="postings-list">
+            <div class="card posting-card">
+                <div class="posting-header">
+                    <h2>Frontend Developer Intern</h2>
+                    <span class="posting-status active">Active</span>
+                </div>
+                <div class="posting-details">
+                    <div class="detail-item">
+                        <i class="icon-calendar"></i>
+                        <span>Duration: 3 months</span>
+                    </div>
+                    <div class="detail-item">
+                        <i class="icon-department"></i>
+                        <span>Department: Development</span>
+                    </div>
+                    <div class="detail-item">
+                        <i class="icon-applications"></i>
+                        <span>Applications: 15</span>
+                    </div>
+                    <div class="detail-item">
+                        <i class="icon-positions"></i>
+                        <span>Positions: 2</span>
+                    </div>
+                </div>
+                <div class="posting-actions">
+                    <a href="posting-detail.html" class="btn btn-sm">View Details</a>
+                    <button class="btn btn-sm btn-outline">Edit</button>
+                    <button class="btn btn-sm btn-danger">Close</button>
+                </div>
+            </div>
+
+            <div class="card posting-card">
+                <div class="posting-header">
+                    <h2>UX Design Intern</h2>
+                    <span class="posting-status active">Active</span>
+                </div>
+                <div class="posting-details">
+                    <div class="detail-item">
+                        <i class="icon-calendar"></i>
+                        <span>Duration: 2 months</span>
+                    </div>
+                    <div class="detail-item">
+                        <i class="icon-department"></i>
+                        <span>Department: Design</span>
+                    </div>
+                    <div class="detail-item">
+                        <i class="icon-applications"></i>
+                        <span>Applications: 8</span>
+                    </div>
+                    <div class="detail-item">
+                        <i class="icon-positions"></i>
+                        <span>Positions: 1</span>
+                    </div>
+                </div>
+                <div class="posting-actions">
+                    <a href="posting-detail.html" class="btn btn-sm">View Details</a>
+                    <button class="btn btn-sm btn-outline">Edit</button>
+                    <button class="btn btn-sm btn-danger">Close</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- New Posting Modal -->
+        <div id="postingModal" class="modal">
+            <div class="modal-content card">
+                <span class="close">&times;</span>
+                <h2>Create New Internship Posting</h2>
+                <form class="posting-form">
+                    <div class="form-group">
+                        <label for="postingTitle" class="required">Job Title</label>
+                        <input type="text" id="postingTitle" class="form-control" required>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="postingDepartment" class="required">Department</label>
+                            <select id="postingDepartment" class="form-control" required>
+                                <option value="">Select Department</option>
+                                <option value="development">Development</option>
+                                <option value="design">Design</option>
+                                <option value="marketing">Marketing</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="postingPositions" class="required">Number of Positions</label>
+                            <input type="number" id="postingPositions" class="form-control" min="1" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="postingStart" class="required">Start Date</label>
+                            <input type="date" id="postingStart" class="form-control" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="postingDuration" class="required">Duration (months)</label>
+                            <select id="postingDuration" class="form-control" required>
+                                <option value="1">1 month</option>
+                                <option value="2">2 months</option>
+                                <option value="3" selected>3 months</option>
+                                <option value="6">6 months</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="postingDescription" class="required">Job Description</label>
+                        <textarea id="postingDescription" class="form-control" rows="5" required></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="postingSkills">Required Skills</label>
+                        <textarea id="postingSkills" class="form-control" rows="3"></textarea>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-primary">Create Posting</button>
+                        <button type="button" class="btn btn-outline">Save Draft</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <p>&copy; 2023 SCAD System. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../js/company-postings.js"></script>
+</body>
+</html>
