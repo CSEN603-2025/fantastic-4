@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Internship Application Management</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f4f8;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      flex-direction: column;
+    }
+
+    .login-container {
+      background: white;
+      padding: 2rem;
+      border-radius: 8px;
+      width: 300px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      margin-bottom: 30px;
+    }
+
+    input,
+    button {
+      width: 100%;
+      padding: 0.5rem;
+      margin-top: 0.5rem;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+    }
+
+    button {
+      background-color: #007bff;
+      color: white;
+      font-weight: bold;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+      cursor: pointer;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+
+    .form-group {
+      margin-bottom: 1rem;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .section {
+      margin-bottom: 40px;
+    }
+
+    .internship-list,
+    .internship-details {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .internship-item {
+      border: 1px solid #ccc;
+      padding: 10px;
+      border-radius: 4px;
+    }
+
+    .internship-item:hover {
+      background-color: #f9f9f9;
+    }
+
+    .internship-status {
+      font-weight: bold;
+    }
+
+    .internship-status.pending {
+      color: orange;
+    }
+
+    .internship-status.accepted {
+      color: green;
+    }
+
+    .internship-status.rejected {
+      color: red;
+    }
+
+    .internship-status.finalized {
+      color: blue;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Login Container -->
+  <div class="login-container">
+    <h2>Login</h2>
+    <form action="#" method="POST">
+      <div class="form-group">
+        <input type="text" name="username" placeholder="Username" required>
+      </div>
+      <div class="form-group">
+        <input type="password" name="password" placeholder="Password" required>
+      </div>
+      <button type="submit">Login</button>
+    </form>
+  </div>
+
+  <!-- Main Container for Internship Features -->
+  <div class="container">
+    
+    <!-- Student/PRO Student View -->
+    <div class="section">
+      <h3>My Internship Applications</h3>
+      <div class="internship-list">
+        <div class="internship-item">
+          <h4>Internship Title 1</h4>
+          <p>Company Name</p>
+          <p class="internship-status pending">Status: Pending</p>
+        </div>
+        <div class="internship-item">
+          <h4>Internship Title 2</h4>
+          <p>Company Name</p>
+          <p class="internship-status finalized">Status: Finalized</p>
+        </div>
+        <div class="internship-item">
+          <h4>Internship Title 3</h4>
+          <p>Company Name</p>
+          <p class="internship-status accepted">Status: Accepted</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Company View -->
+    <div class="section">
+      <h3>Manage Internship Applications</h3>
+      <div class="internship-list">
+        <div class="internship-item">
+          <h4>Internship Post 1</h4>
+          <p>Number of Applications: 5</p>
+          <p>Applications: <a href="#">View</a></p>
+        </div>
+        <div class="internship-item">
+          <h4>Internship Post 2</h4>
+          <p>Number of Applications: 3</p>
+          <p>Applications: <a href="#">View</a></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Internship Application Details (for companies) -->
+    <div class="section internship-details">
+      <h3>Applicant Details</h3>
+      <div class="internship-item">
+        <h4>Applicant Name</h4>
+        <p>Email: applicant@example.com</p>
+        <p>Phone: 123-456-7890</p>
+        <p>Resume: <a href="#">Download</a></p>
+        <button>Set Status: Accepted</button>
+        <button>Set Status: Rejected</button>
+        <button>Set Status: Finalized</button>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
