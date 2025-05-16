@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Report Management - SCAD System</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Report Management</h1>
+        <nav>
+            <a href="coordinator-dashboard.html">Dashboard</a>
+            <a href="login.html">Logout</a>
+        </nav>
+    </header>
+
+    <main class="coordinator-main">
+        <div class="coordinator-nav">
+            <a href="coordinator-applications.html">Applications</a>
+            <a href="coordinator-cycle-management.html">Cycle Management</a>
+            <a href="coordinator-companies.html">Companies</a>
+            <a href="coordinator-reports.html" class="active">Reports</a>
+            <a href="coordinator-evaluations.html">Evaluations</a>
+        </div>
+
+        <div class="report-management">
+            <div class="filters">
+                <select id="reportFilter">
+                    <option>All Reports</option>
+                    <option>Pending Review</option>
+                    <option>Approved</option>
+                    <option>Flagged</option>
+                </select>
+                <input type="text" placeholder="Search reports...">
+            </div>
+
+            <table class="report-table">
+                <!-- Report listings would go here -->
+            </table>
+        </div>
+    </main>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Faculty Dashboard - SCAD</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <header class="dashboard-header">
+        <div class="header-content">
+            <h1>SCAD Faculty Portal</h1>
+            <div class="user-controls">
+                <span class="user-name">Dr. Smith</span>
+                <a href="login.html" class="logout-btn">Logout</a>
+            </div>
+        </div>
+        <nav class="main-nav">
+            <a href="faculty-dashboard.html" class="active">Dashboard</a>
+            <a href="faculty-reports.html">Report Evaluation</a>
+            <a href="faculty-students.html">Student Progress</a>
+            <a href="faculty-statistics.html">Department Stats</a>
+            <a href="faculty-profile.html">Profile</a>
+        </nav>
+    </header>
+
+    <main class="dashboard-main">
+        <div class="faculty-quickview">
+            <div class="view-card">
+                <h3>Reports to Evaluate</h3>
+                <div class="stat-value">7</div>
+                <a href="faculty-reports.html">Start Evaluation</a>
+            </div>
+            <div class="view-card">
+                <h3>Students in Program</h3>
+                <div class="stat-value">24</div>
+                <a href="faculty-students.html">View Progress</a>
+            </div>
+            <div class="view-card">
+                <h3>Department Average</h3>
+                <div class="stat-value">4.2/5</div>
+                <a href="faculty-statistics.html">See Details</a>
+            </div>
+        </div>
+
+        <section class="priority-tasks">
+            <h2>Priority Tasks</h2>
+            <div class="task-list">
+                <div class="task-item">
+                    <h4>Finalize CS-401 Reports</h4>
+                    <p>Due in 3 days</p>
+                    <a href="faculty-reports.html?course=CS-401" class="task-btn">Evaluate Now</a>
+                </div>
+                <div class="task-item">
+                    <h4>Review Student Appeals</h4>
+                    <p>2 pending appeals</p>
+                    <a href="faculty-reports.html?filter=appeals" class="task-btn">Review Appeals</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="../js/faculty-dashboard.js"></script>
+</body>
+</html>

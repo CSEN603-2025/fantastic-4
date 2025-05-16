@@ -1,0 +1,206 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Statistics Dashboard - SCAD System</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <style>
+        /* Statistics-specific styles */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .stat-card {
+            background: white;
+            border-radius: 8px;
+            padding: 1.5rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .stat-value {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #2c3e50;
+            margin: 0.5rem 0;
+        }
+
+        .stat-label {
+            color: #7f8c8d;
+            font-size: 0.9rem;
+        }
+
+        .chart-container {
+            height: 250px;
+            margin-top: 1rem;
+            position: relative;
+        }
+
+        .full-width {
+            grid-column: 1 / -1;
+        }
+
+        .trend-indicator {
+            display: inline-flex;
+            align-items: center;
+            font-size: 0.9rem;
+            margin-left: 0.5rem;
+        }
+
+        .trend-up {
+            color: #2ecc71;
+        }
+
+        .trend-down {
+            color: #e74c3c;
+        }
+
+        .time-filters {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .time-btn {
+            padding: 0.5rem 1rem;
+            background: #f8f9fa;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+            .time-btn.active {
+                background: #2c3e50;
+                color: white;
+            }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>SCAD Analytics Dashboard</h1>
+        <nav>
+            <a href="coordinator-dashboard.html">Back to Dashboard</a>
+            <a href="login.html">Logout</a>
+        </nav>
+    </header>
+
+    <main class="coordinator-main">
+        <!-- Consistent Coordinator Navigation -->
+        <div class="coordinator-nav">
+            <a href="coordinator-applications.html">Applications</a>
+            <a href="coordinator-cycle-management.html">Cycle Management</a>
+            <a href="scad-office-companies.html">Companies</a>
+            <a href="report-management.html">Reports</a>
+            <a href="evaluation-report.html">Evaluations</a>
+            <a href="statistics.html" class="active">Statistics</a>
+        </div>
+
+        <!-- Time Period Filters -->
+        <div class="time-filters">
+            <button class="time-btn active">Current Cycle</button>
+            <button class="time-btn">Last 3 Cycles</button>
+            <button class="time-btn">Year to Date</button>
+            <button class="time-btn">All Time</button>
+        </div>
+
+        <!-- Key Metrics Overview -->
+        <div class="stats-grid">
+            <div class="stat-card">
+                <h3>Student Participation</h3>
+                <div class="stat-value">142 <span class="trend-indicator trend-up">↑12%</span></div>
+                <div class="stat-label">Active Internships</div>
+                <div class="chart-container" id="participationChart"></div>
+            </div>
+
+            <div class="stat-card">
+                <h3>Company Engagement</h3>
+                <div class="stat-value">48 <span class="trend-indicator trend-up">↑5%</span></div>
+                <div class="stat-label">Active Companies</div>
+                <div class="chart-container" id="companiesChart"></div>
+            </div>
+
+            <div class="stat-card">
+                <h3>Report Completion</h3>
+                <div class="stat-value">87% <span class="trend-indicator trend-down">↓3%</span></div>
+                <div class="stat-label">Submitted on Time</div>
+                <div class="chart-container" id="reportsChart"></div>
+            </div>
+
+            <div class="stat-card full-width">
+                <h3>Internships by Major</h3>
+                <div class="chart-container" style="height: 300px;" id="majorsChart"></div>
+            </div>
+
+            <div class="stat-card full-width">
+                <h3>Evaluation Ratings</h3>
+                <div class="flex-row" style="display: flex; gap: 2rem;">
+                    <div style="flex: 1;">
+                        <div class="stat-value">4.2</div>
+                        <div class="stat-label">Avg. Student Rating</div>
+                    </div>
+                    <div style="flex: 1;">
+                        <div class="stat-value">4.5</div>
+                        <div class="stat-label">Avg. Company Rating</div>
+                    </div>
+                    <div style="flex: 3;">
+                        <div class="chart-container" id="ratingsChart"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Data Export Section -->
+        <section class="stat-card">
+            <h3>Export Data</h3>
+            <div class="form-row">
+                <select class="export-select">
+                    <option>Current Cycle Summary</option>
+                    <option>Student Participation</option>
+                    <option>Company Engagement</option>
+                    <option>Evaluation Reports</option>
+                </select>
+                <select class="export-format">
+                    <option>PDF Report</option>
+                    <option>Excel Spreadsheet</option>
+                    <option>CSV Data</option>
+                </select>
+                <button class="primary-btn">Generate Export</button>
+            </div>
+        </section>
+    </main>
+
+    <!-- Charting Library (Example using Chart.js) -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>// Initialize charts
+        document.addEventListener('DOMContentLoaded', function() {
+            // Sample chart initialization
+            new Chart(document.getElementById('participationChart'), {
+                type: 'line',
+                data: {
+                    labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
+                    datasets: [{
+                        label: 'Active Interns',
+                        data: [85, 92, 104, 121, 135, 142],
+                        borderColor: '#3498db',
+                        tension: 0.1,
+                        fill: true
+                    }]
+                },
+                options: { responsive: true, maintainAspectRatio: false }
+            });
+
+            // Additional charts would be initialized here...
+        });
+
+        // Time filter buttons
+        document.querySelectorAll('.time-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                document.querySelectorAll('.time-btn').forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+                // In a real implementation, this would reload data for the selected time period
+            });
+        });</script>
+</body>
+</html>

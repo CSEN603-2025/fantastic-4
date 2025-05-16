@@ -2,32 +2,71 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Student Dashboard</title>
-    <link rel="stylesheet" href="../css/styles.css" />
+    <title>Student Dashboard - SCAD</title>
+    <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
-    <header><h1>Student Dashboard</h1></header>
-    <main>
-        <h2>Welcome, <span id="studentName"></span>!</h2>
-        <div class="dashboard-cards">
-            <div class="card">
-                <h3>My Applications</h3>
-                <p id="appCount">0</p>
-                <a href="#">View Applications</a>
+    <header class="dashboard-header">
+        <div class="header-content">
+            <h1>SCAD Student Portal</h1>
+            <div class="user-controls">
+                <span class="user-name">Student Name</span>
+                <a href="login.html" class="logout-btn">Logout</a>
             </div>
-            <div class="card">
-                <h3>Available Internships</h3>
-                <p id="internshipCount">0</p>
-                <a href="#">Browse</a>
-            </div>
-            <div class="card"><a href="#">Submit Report</a></div>
-            <div class="card"><a href="#">View Grades</a></div>
         </div>
-        <section>
-            <h3>Notifications</h3>
-            <ul id="notificationsList"></ul>
+        <nav class="main-nav">
+            <a href="student-dashboard.html" class="active">Dashboard</a>
+            <a href="student-applications.html">Applications</a>
+            <a href="student-reports.html">Reports</a>
+            <a href="student-resources.html">Resources</a>
+            <a href="student-appointments.html">Appointments</a>
+            <a href="student-profile.html">Profile</a>
+        </nav>
+    </header>
+
+    <main class="dashboard-main">
+        <div class="status-overview">
+            <div class="status-card internship-status">
+                <h3>Internship Status</h3>
+                <div class="status-value">Approved</div>
+                <a href="student-applications.html">View Details</a>
+            </div>
+            <div class="status-card report-status">
+                <h3>Report Status</h3>
+                <div class="status-value">Pending Review</div>
+                <a href="student-reports.html">Check Progress</a>
+            </div>
+            <div class="status-card pro-badge">
+                <h3>PRO Badge</h3>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 67%;">2/3 Months</div>
+                </div>
+            </div>
+        </div>
+
+        <section class="action-items">
+            <h2>Quick Actions</h2>
+            <div class="action-grid">
+                <a href="student-submit-report.html" class="action-card">
+                    <h3>Submit Report</h3>
+                    <p>Upload your internship report</p>
+                </a>
+                <a href="student-applications.html" class="action-card">
+                    <h3>Apply for Internships</h3>
+                    <p>Browse available opportunities</p>
+                </a>
+                <a href="student-resources.html" class="action-card">
+                    <h3>View Resources</h3>
+                    <p>Guides and tutorials</p>
+                </a>
+                <a href="student-appointments.html" class="action-card">
+                    <h3>Schedule Meeting</h3>
+                    <p>With your coordinator</p>
+                </a>
+            </div>
         </section>
     </main>
+
     <script src="../js/student-dashboard.js"></script>
 </body>
 </html>

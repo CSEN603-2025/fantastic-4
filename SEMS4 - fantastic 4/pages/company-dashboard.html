@@ -1,68 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <title>Company Dashboard</title>
-    <link rel="stylesheet" href="../css/styles.css" />
-    <style>
-        /* Smooth transition */
-        #formSection {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.5s ease-in-out, padding 0.5s;
-            padding: 0 1rem;
-        }
-
-            #formSection.open {
-                max-height: 1000px;
-                padding: 1rem;
-            }
-
-        textarea {
-            width: 100%;
-            height: 80px;
-            margin-top: 0.5rem;
-            border-radius: 4px;
-            border: 1px solid #ccc;
-            padding: 0.5rem;
-            resize: vertical;
-        }
-    </style>
+    <meta charset="UTF-8">
+    <title>Company Dashboard - SCAD</title>
+    <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
-    <header><h1>Company Dashboard</h1></header>
-    <main>
-        <h2>Welcome, <span id="companyName"></span>!</h2>
+    <header class="dashboard-header">
+        <div class="header-content">
+            <h1>SCAD Company Portal</h1>
+            <div class="user-controls">
+                <span class="company-name">TechCorp Inc.</span>
+                <a href="login.html" class="logout-btn">Logout</a>
+            </div>
+        </div>
+        <nav class="main-nav">
+            <a href="company-dashboard.html" class="active">Dashboard</a>
+            <a href="company-postings.html">Internship Postings</a>
+            <a href="company-applications.html">Applications</a>
+            <a href="company-interns.html">Current Interns</a>
+            <a href="company-evaluations.html">Evaluations</a>
+            <a href="company-profile.html">Profile</a>
+        </nav>
+    </header>
 
-        <!-- Toggle Button -->
-        <section>
-            <button id="showFormBtn">Add Internship</button>
-        </section>
+    <main class="dashboard-main">
+        <div class="company-overview">
+            <div class="overview-card">
+                <h3>Active Postings</h3>
+                <div class="stat-value">5</div>
+                <a href="company-postings.html">Manage Postings</a>
+            </div>
+            <div class="overview-card">
+                <h3>New Applications</h3>
+                <div class="stat-value">12</div>
+                <a href="company-applications.html">Review Applications</a>
+            </div>
+            <div class="overview-card">
+                <h3>Current Interns</h3>
+                <div class="stat-value">8</div>
+                <a href="company-interns.html">View Interns</a>
+            </div>
+        </div>
 
-        <!-- Hidden Internship Form -->
-        <section id="formSection">
-            <h3>Create New Internship</h3>
-            <form id="internshipForm">
-                <input type="text" id="title" placeholder="Job Title" required />
-                <input type="text" id="duration" placeholder="Duration (e.g. 3 months)" required />
-                <select id="paidStatus" required>
-                    <option value="">Paid or Unpaid?</option>
-                    <option value="paid">Paid</option>
-                    <option value="unpaid">Unpaid</option>
-                </select>
-                <input type="number" id="salary" placeholder="Expected Salary (optional)" />
-                <input type="text" id="skills" placeholder="Skills Required (comma separated)" required />
-                <textarea id="description" placeholder="Job Description" required></textarea>
-                <button type="submit">Save Internship</button>
-            </form>
-        </section>
-
-        <!-- Internship List -->
-        <section>
-            <h3>Your Job Posts</h3>
-            <div id="internshipList"></div>
+        <section class="pending-actions">
+            <h2>Action Required</h2>
+            <div class="action-list">
+                <div class="action-item">
+                    <p>3 internship applications need review</p>
+                    <a href="company-applications.html" class="action-btn">Review Now</a>
+                </div>
+                <div class="action-item">
+                    <p>2 evaluations pending for completed interns</p>
+                    <a href="company-evaluations.html" class="action-btn">Complete Evaluations</a>
+                </div>
+            </div>
         </section>
     </main>
+
     <script src="../js/company-dashboard.js"></script>
 </body>
 </html>

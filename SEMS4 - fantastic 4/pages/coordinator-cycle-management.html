@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cycle Management - Coordinator Dashboard</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <style>
+        /* Consistent with other coordinator pages */
+        .coordinator-nav {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid #eee;
+        }
+
+            .coordinator-nav a {
+                padding: 0.5rem 1rem;
+                text-decoration: none;
+                color: #2c3e50;
+                border-radius: 4px;
+            }
+
+                .coordinator-nav a:hover {
+                    background: #f0f4f8;
+                }
+
+                .coordinator-nav a.active {
+                    background: #2c3e50;
+                    color: white;
+                }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Internship Cycle Management</h1>
+        <nav>
+            <a href="coordinator-dashboard.html">Back to Dashboard</a>
+            <a href="login.html">Logout</a>
+        </nav>
+    </header>
+
+    <main class="coordinator-main">
+        <!-- Consistent Navigation Bar -->
+        <div class="coordinator-nav">
+            <a href="coordinator-applications.html">Applications</a>
+            <a href="coordinator-cycle-management.html" class="active">Cycle Management</a>
+            <a href="scad-office-companies.html">Companies</a>
+            <a href="report-management.html">Reports</a>
+            <a href="evaluation-report.html">Evaluations</a>
+            <a href="statistics.html">Statistics</a>
+        </div>
+
+        <!-- Page content remains the same -->
+        <section>
+            <h2>Current Internship Cycle</h2>
+            <!-- ... existing cycle management content ... -->
+        </section>
+    </main>
+
+    <script src="../js/coordinator-cycle.js"></script>
+</body>
+</html>

@@ -1,36 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <title>Coordinator Dashboard</title>
-    <link rel="stylesheet" href="../css/styles.css" />
+    <meta charset="UTF-8">
+    <title>Coordinator Dashboard - SCAD</title>
+    <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
-    <header><h1>Coordinator Dashboard (SCAD Office)</h1></header>
-    <main>
-        <h2>Manage Student Applications</h2>
+    <header class="dashboard-header">
+        <div class="header-content">
+            <h1>SCAD Coordinator Portal</h1>
+            <div class="user-controls">
+                <span class="user-name">Coordinator Name</span>
+                <a href="login.html" class="logout-btn">Logout</a>
+            </div>
+        </div>
+        <nav class="main-nav">
+            <a href="coordinator-dashboard.html" class="active">Dashboard</a>
+            <a href="coordinator-applications.html">Applications</a>
+            <a href="coordinator-cycle-management.html">Cycle Management</a>
+            <a href="scad-office-companies.html">Companies</a>
+            <a href="coordinator-reports.html">Reports</a>
+            <a href="evaluation-report.html">Evaluations</a>
+            <a href="coordinator-statistics.html">Statistics</a>
+        </nav>
+    </header>
 
-        <label for="filterStatus">Filter by Status:</label>
-        <select id="filterStatus">
-            <option value="all">All</option>
-            <option value="pending">Pending</option>
-            <option value="accepted">Accepted</option>
-            <option value="rejected">Rejected</option>
-        </select>
+    <main class="dashboard-main">
+        <div class="quick-stats">
+            <div class="stat-card">
+                <h3>Pending Applications</h3>
+                <div class="stat-value">24</div>
+                <a href="coordinator-applications.html?filter=pending">Review Now</a>
+            </div>
+            <div class="stat-card">
+                <h3>Active Internships</h3>
+                <div class="stat-value">142</div>
+                <a href="coordinator-statistics.html">View Details</a>
+            </div>
+            <div class="stat-card">
+                <h3>Reports Due</h3>
+                <div class="stat-value">18</div>
+                <a href="coordinator-reports.html">Evaluate Reports</a>
+            </div>
+        </div>
 
-        <table id="applicationsTable">
-            <thead>
-                <tr>
-                    <th>Student</th>
-                    <th>Internship Title</th>
-                    <th>Status</th>
-                    <th>Assign Evaluator</th>
-                    <th>Assign Company</th>
-                </tr>
-            </thead>
-            <tbody></tbody>
-        </table>
+        <section class="recent-activity">
+            <h2>Recent Activity</h2>
+            <div class="activity-list">
+                <!-- Activity items would be dynamically loaded -->
+            </div>
+        </section>
     </main>
+
     <script src="../js/coordinator-dashboard.js"></script>
 </body>
 </html>
